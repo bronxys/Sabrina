@@ -1,0 +1,185 @@
+[
+    {
+        "msg": "olá",
+        "messages": [
+            "tudo bem?"
+        ]
+    },
+    {
+        "msg": "oi",
+        "messages": [
+            "kql"
+        ]
+    },
+    {
+        "msg": "que",
+        "messages": []
+    },
+    {
+        "msg": "oii",
+        "messages": []
+    },
+    {
+        "msg": "oiii",
+        "messages": []
+    },
+    {
+        "msg": "oiiii",
+        "messages": []
+    },
+    {
+        "msg": "#antipv",
+        "messages": [
+            "o anti privado foi ativado com sucesso. caso alguém envie mensagem para o bot, será bloqueado!",
+            "o anti privado foi desativado com sucesso.",
+            "o anti privado foi ativado com sucesso. caso alguém envie mensagem para o bot, será bloqueado!",
+            "o anti privado foi desativado com sucesso."
+        ]
+    },
+    {
+        "msg": "#",
+        "messages": []
+    },
+    {
+        "msg": "#prefixos",
+        "messages": [
+            "lista de prefixos para uso do bot, no grupo: testando...\n\nprefixo: #\n\n"
+        ]
+    },
+    {
+        "msg": "#simih2 0",
+        "messages": [
+            "já está desativado."
+        ]
+    },
+    {
+        "msg": "#simih 0",
+        "messages": [
+            "já está desativado."
+        ]
+    },
+    {
+        "msg": "#antipv 1",
+        "messages": [
+            "o anti privado foi ativado com sucesso. caso alguém envie mensagem para o bot, será bloqueado!"
+        ]
+    },
+    {
+        "msg": "credo",
+        "messages": [
+            "o",
+            "ac"
+        ]
+    },
+    {
+        "msg": "olan",
+        "messages": []
+    },
+    {
+        "msg": "o meu é rápido, não cai",
+        "messages": [
+            "quantos gps teu tá?"
+        ]
+    },
+    {
+        "msg": "quantos gps teu tá?",
+        "messages": [
+            "gps? ping?",
+            "4"
+        ]
+    },
+    {
+        "msg": "tu usa oq? termux?",
+        "messages": [
+            "eu disse bronxys"
+        ]
+    },
+    {
+        "msg": "kkkk",
+        "messages": []
+    },
+    {
+        "msg": "a",
+        "messages": []
+    },
+    {
+        "msg": "gps? ping?",
+        "messages": [
+            "grupos"
+        ]
+    },
+    {
+        "msg": "déficit de antenção",
+        "messages": []
+    },
+    {
+        "msg": "grupos",
+        "messages": [
+            "klh, sou lerdo dms"
+        ]
+    },
+    {
+        "msg": "tem várias",
+        "messages": [
+            "várias quais"
+        ]
+    },
+    {
+        "msg": "ela tá mandando imagem cinza em algumas",
+        "messages": []
+    },
+    {
+        "msg": "várias quais",
+        "messages": [
+            "n lembro o nome, mas a maioria, se quiser mando pv"
+        ]
+    },
+    {
+        "msg": "ok",
+        "messages": []
+    },
+    {
+        "msg": "#gelo oi",
+        "messages": [
+            "em 365 dias úteis termino o comando kkkk meme, to enviando!"
+        ]
+    },
+    {
+        "msg": "ou é 4h e 4h",
+        "messages": []
+    },
+    {
+        "msg": "meu bot tá em 60",
+        "messages": []
+    },
+    {
+        "msg": "#break oi",
+        "messages": [
+            "em 365 dias úteis termino o comando kkkk meme, to enviando!"
+        ]
+    },
+    {
+        "msg": "#addcmdprem plau",
+        "messages": [
+            "o comando plau foi adicionado na lista de comandos premium."
+        ]
+    },
+    {
+        "msg": "tentem usar o play",
+        "messages": []
+    },
+    {
+        "msg": "/play afroman",
+        "messages": []
+    },
+    {
+        "msg": "o meu play não tá funcionando ainda",
+        "messages": [
+            "vc colocou sua key?"
+        ]
+    },
+    {
+        "msg": "kk",
+        "messages": []
+    }
+]

@@ -1,12 +1,14 @@
-const menu = (prefix, NomeDoBot, sender) => {
+const menu = (prefix, NomeDoBot, sender, NickDono, packname) => {
   
 // NÃO APAGUE ESSE ${NickDono} nem 
 //${numerodn} nem ${NomeDoBot} nem ${prefix} só se quiser apagar completo, não coloque nada ${dentro assim} ISSO SÃO DEFINIÇÕES QUE ESTÁ PUXANDO DO settings.json, da pasta dono, só pode altera a base de tudo, menos as definições, só se quiser apagar a definição completa.  
   
 return `​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​╭═══════════════════ ⪩
 ╰╮き⃟✰𝐈𝐍𝐅𝐎-𝐁𝐎𝐓/𝐔𝐒𝐄𝐑❈⃟き
-╭┤✰ ⋟ Bot: ${NomeDoBot}
-┃│✰ ⋟ Usuário: @${sender.split("@")[0]}
+╭┤✰ ⋟ Bot: *${NomeDoBot}*
+┃│✰ ⋟ Usuário: *@${sender.split("@")[0]}*
+┃│✰ ⋟ Minha Versão: *${packname.version}*
+┃│✰ ⋟ Dono: *${NickDono}*
 ┃╰══ ⪨
 ╰╦══════════════════ ⪨
 ╭┤き⃟✰𝐃𝐈𝐕𝐄𝐑𝐒𝐎𝐒-𝐌𝐄𝐍𝐔𝐒✰⃟⃟き
@@ -17,16 +19,18 @@ return `​​​​​​​​​​​​​​​​​​​​​​​​
 ┃│✰ ⋟ ${prefix}Logos
 ┃│✰ ⋟ ${prefix}Brincadeiras
 ┃│✰ ⋟ ${prefix}Animes
+┃│✰ ⋟ ${prefix}Menusabcity
 ┃╰══ ⪨
 ╰╦══════════════════ ⪨
 ╭┤き⃟✰𝐂𝐌𝐃𝐒-𝐃𝐄-𝐌𝐄𝐌𝐁𝐑𝐎✰⃟⃟き
+┃│✰ ⋟ ${prefix}Infobot (Informações)
 ┃│✰ ⋟ ${prefix}Idiomas (Gtts)
-┃│✰ ⋟ ${prefix}Carteira (Saldo disponível)
 ┃│✰ ⋟ ${prefix}Bug (Questione/Erros) 
 ┃│✰ ⋟ ${prefix}Infodono (Info do dono)
 ┃│✰ ⋟ ${prefix}Sugestao (Dica/Sugestão)
 ┃│✰ ⋟ ${prefix}Avalie (O quanto é bom) 
 ┃│✰ ⋟ ${prefix}Infocmd (Comando) 
+┃│✰ ⋟ ${prefix}Infowelcome
 ┃╰══ ⪨
 ╰╦══════════════════ ⪨
 ╭┤き⃟✰𝐂𝐌𝐃𝐒-𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐕𝐎𝐒✰⃟⃟き
@@ -35,6 +39,7 @@ return `​​​​​​​​​​​​​​​​​​​​​​​​
 ┃│✰ ⋟ ${prefix}Rankativo
 ┃│✰ ⋟ ${prefix}Checkativo (@Marcar)
 ┃│✰ ⋟ ${prefix}Ranklevel (do Grupo) 
+┃│✰ ⋟ ${prefix}Dados
 ┃╰══ ⪨
 ╰╦══════════════════ ⪨
 ╭┤き⃟✰𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐒✰⃟⃟き
@@ -46,24 +51,27 @@ return `​​​​​​​​​​​​​​​​​​​​​​​​
 ┃│✰ ⋟ ${prefix}Playdoc (Nome)
 ┃│✰ ⋟ ${prefix}Playdoc2 (Nome)
 ┃│✰ ⋟ ${prefix}Playmix (Nome)
-┃│✰ ⋟ ${prefix}Play_audio (Nome/Url)
-┃│✰ ⋟ ${prefix}Play_video (Nome/Url)
-┃│✰ ⋟ ${prefix}Shazam (Mencionar-aud)
+┃│✰ ⋟ ${prefix}Ytmp3 (Link)
+┃│✰ ⋟ ${prefix}Ytdoc (Link)
+┃│✰ ⋟ ${prefix}Ytmp4 (Link)
+┃│✰ ⋟ ${prefix}Shazam (@audio)
 ┃│✰ ⋟ ${prefix}Audiomeme (Nome)
-┃│✰ ⋟ ${prefix}Audiomeme2 (Nome)
 ┃│✰ ⋟ ${prefix}Tiktok (Link) 
 ┃│✰ ⋟ ${prefix}Tiktokaudio (Link)
 ┃│✰ ⋟ ${prefix}Tiktokimg (Link)
 ┃│✰ ⋟ ${prefix}Instagram (Link) 
 ┃│✰ ⋟ ${prefix}Instaaudio (Link) 
+┃│✰ ⋟ ${prefix}Instastory (@Usuário) 
 ┃│✰ ⋟ ${prefix}Instareels (Link)
+┃│✰ ⋟ ${prefix}Threads (Link)
+┃│✰ ⋟ ${prefix}Twitter (Link)
+┃│✰ ⋟ ${prefix}Multidl (Link)
 ┃│✰ ⋟ ${prefix}Deezer (Nome) 
 ┃│✰ ⋟ ${prefix}Soundcloud (Link)
-┃│✰ ⋟ ${prefix}Kwaivideo (Link) 
 ┃│✰ ⋟ ${prefix}Mediafire (Link)
 ┃│✰ ⋟ ${prefix}Googledrive (Link)
-┃│✰ ⋟ ${prefix}Imgpralink (Marcar-img)
-┃│✰ ⋟ ${prefix}Videopralink (Marcar-vid)
+┃│✰ ⋟ ${prefix}Capcutmodel (Link)
+┃│✰ ⋟ ${prefix}Gerarlink (img/vid)
 ┃╰══ ⪨
 ╰╦══════════════════ ⪨
 ╭┤き⃟✰𝐏𝐄𝐒𝐐𝐔𝐈𝐒𝐀𝐒✰⃟き
@@ -73,45 +81,55 @@ return `​​​​​​​​​​​​​​​​​​​​​​​​
 ┃│✰ ⋟ ${prefix}Clima (Cidade)
 ┃│✰ ⋟ ${prefix}Book (Nome do Livro)
 ┃│✰ ⋟ ${prefix}Movie (Nome do Filme)
+┃│✰ ⋟ ${prefix}Movie2 (Nome do Filme)
+┃│✰ ⋟ ${prefix}Imdb (Nome do Filme)
+┃│✰ ⋟ ${prefix}Imdbinfo (Link do Filme)
+┃│✰ ⋟ ${prefix}Animetv (Nome do Anime)
 ┃│✰ ⋟ ${prefix}Serie (Nome da Série)
 ┃│✰ ⋟ ${prefix}Lyrics (Música) 
 ┃│✰ ⋟ ${prefix}Lyrics2 (Música) 
 ┃│✰ ⋟ ${prefix}Playstore (Nome) 
 ┃│✰ ⋟ ${prefix}Aptoide (Nome)
+┃│✰ ⋟ ${prefix}Uptodown (Nome)
+┃│✰ ⋟ ${prefix}Receita (Nome)
 ┃│✰ ⋟ ${prefix}Signo (Signo) 
 ┃│✰ ⋟ ${prefix}Amazon (Nome) 
 ┃│✰ ⋟ ${prefix}Googlesrc (Nome)
 ┃│✰ ⋟ ${prefix}Memedroid
 ┃│✰ ⋟ ${prefix}iFunnyvideo
-┃│✰ ⋟ ${prefix}Americanas (Nome)
-┃│✰ ⋟ ${prefix}Submarino (Nome)
 ┃│✰ ⋟ ${prefix}Wikipedia (Nome) 
 ┃│✰ ⋟ ${prefix}Pinterest (Nome) 
 ┃│✰ ⋟ ${prefix}Gimage (Nome) 
 ┃│✰ ⋟ ${prefix}Dicionario (Palavra) 
-┃│✰ ⋟ ${prefix}Icms (Valor) 
+┃│✰ ⋟ ${prefix}Ytplaylist (Link)
+┃│✰ ⋟ ${prefix}Ytsearch (Nome)
+┃│✰ ⋟ ${prefix}Games (Nome)
 ┃╰══ ⪨
 ╰╦══════════════════ ⪨
 ╭┤き⃟✰𝐈𝐍𝐓𝐄𝐋𝐈𝐆𝐄𝐍𝐂𝐈𝐀 (𝐈𝐀)✰⃟き
 ┃│✰ ⋟ ${prefix}Corretor (Texto)
 ┃│✰ ⋟ ${prefix}Bard (Pergunta)
-┃│✰ ⋟ ${prefix}Chatgpt (Texto)
 ┃│✰ ⋟ ${prefix}Gpt (Texto)
+┃│✰ ⋟ ${prefix}Gpt-4 (Texto)
 ┃│✰ ⋟ ${prefix}Gptvoz (Texto)
-┃│✰ ⋟ ${prefix}Gptimg (Texto)
 ┃│✰ ⋟ ${prefix}Redacao (Tema)
 ┃│✰ ⋟ ${prefix}Summerize (Texto)
 ┃│✰ ⋟ ${prefix}Imagine (Texto)
+┃│✰ ⋟ ${prefix}Photoleap (Texto)
+┃│✰ ⋟ ${prefix}Totext (Audio)
 ┃╰══ ⪨
 ╰╦══════════════════ ⪨
 ╭┤き⃟✰𝐍𝐎𝐓𝐈𝐂𝐈𝐀𝐒/𝐉𝐎𝐑𝐍𝐀𝐋✰⃟⃟き
-┃│✰ ⋟ ${prefix}Noticias (Tema)
-┃│✰ ⋟ ${prefix}Cnnbrasil (Notícias)
-┃│✰ ⋟ ${prefix}Globo (Notícias)
-┃│✰ ⋟ ${prefix}Poder360 (Notícias)
-┃│✰ ⋟ ${prefix}Uol (Notícias)
-┃│✰ ⋟ ${prefix}Jovempan (Notícias)
-┃│✰ ⋟ ${prefix}Esporte (Notícias)
+┃│✰ ⋟ ${prefix}Getnoticias (Tema)
+┃│✰ ⋟ ${prefix}Esportenews (Notícias)
+┃│✰ ⋟ ${prefix}Proximojogo (Time)
+┃│✰ ⋟ ${prefix}Meutime (Time)
+┃│✰ ⋟ ${prefix}Noticiatime (Time)
+┃│✰ ⋟ ${prefix}Gamenews (Notícias)
+┃│✰ ⋟ ${prefix}Brasileirao (Tabela)
+┃│✰ ⋟ ${prefix}Bbb24news -fhouse
+┃│✰ ⋟ ${prefix}Bbb24news -dhouse
+┃│✰ ⋟ ${prefix}Bbb24news -bigdays
 ┃╰══ ⪨
 ╰╦══════════════════ ⪨
 ╭┤き⃟✰𝐅𝐈𝐆𝐔𝐑𝐈𝐍𝐇𝐀𝐒✰⃟⃟き
@@ -122,6 +140,11 @@ return `​​​​​​​​​​​​​​​​​​​​​​​​
 ┃│✰ ⋟ ${prefix}Attp (Seu texto)
 ┃│✰ ⋟ ${prefix}Togif (Marcar-sticker)
 ┃│✰ ⋟ ${prefix}Roubar (Texto/Texto)
+┃│✰ ⋟ ${prefix}Take (Renomear a figurinha)
+┃│✰ ⋟ ${prefix}Rgtake (Texto|Texto) - Registrar sua marca ďágua.
+┃│✰ ⋟ ${prefix}Qc (Coloque seu texto)
+┃│✰ ⋟ ${prefix}Figuweb (Texto/Cor)
+┃│✰ ⋟ ${prefix}Rntake (Texto|Texto) - Renomeia a sua marca ďagua.
 ┃│✰ ⋟ ${prefix}Figurinhas (Quantidade)
 ┃│✰ ⋟ ${prefix}Figumemes (Quantidade)
 ┃│✰ ⋟ ${prefix}Figuflork (Quantidade)
@@ -134,7 +157,6 @@ return `​​​​​​​​​​​​​​​​​​​​​​​​
 ┃│✰ ⋟ ${prefix}Figudesenho (Quantidade)
 ┃│✰ ⋟ ${prefix}Figuraiva (Quantidade)
 ┃│✰ ⋟ ${prefix}Figuroblox (Quantidade)
-┃│✰ ⋟ ${prefix}Qc (Mensagem desejada)
 ┃│✰ ⋟ ${prefix}Figaleatoria
 ┃╰══ ⪨
 ╰╦══════════════════ ⪨
@@ -149,9 +171,17 @@ return `​​​​​​​​​​​​​​​​​​​​​​​​
 ┃│✰ ⋟ ${prefix}Simi (Hable com ela)  
 ┃│✰ ⋟ ${prefix}Perfil
 ┃│✰ ⋟ ${prefix}Calcular (10 + 10)
+┃│✰ ⋟ ${prefix}Fakechat (@user/msg1/msg2)
+┃│✰ ⋟ ${prefix}Morechat (msg1/msg2)
+┃│✰ ⋟ ${prefix}Obesidade (peso/altura)
+┃│✰ ⋟ ${prefix}Contardias (DD/MM/YYYY)
+┃│✰ ⋟ ${prefix}Ringtone (Toque)
 ┃│✰ ⋟ ${prefix}Fazernick (Oq deseja)
 ┃│✰ ⋟ ${prefix}Ptvmsg (Mencione-V)
 ┃│✰ ⋟ ${prefix}Traduzir (Palavra)
+┃│✰ ⋟ ${prefix}Listaddd (Código do Estado)
+┃│✰ ⋟ ${prefix}Listabr (Números brasileiros)
+┃│✰ ⋟ ${prefix}Listaddi (Código do País)
 ┃╰══ ⪨
 ╰═══════════════════ ⪨`;
 };
@@ -197,6 +227,8 @@ const adms = (prefix, sender) => {
 ┃│✰ ⋟ ${prefix}Odelete (1/0)
 ┃│✰ ⋟ ${prefix}x9visuunica (1/0)
 ┃│✰ ⋟ ${prefix}x9 (1/0)
+┃│✰ ⋟ ${prefix}Limitecomandos
+┃│✰ ⋟ ${prefix}Tempocmd (segundos)
 ┃│✰ ⋟ ${prefix}Legenda_imagem (Texto)
 ┃│✰ ⋟ ${prefix}Legenda_video (Texto)
 ┃│✰ ⋟ ${prefix}Legenda_estrangeiro (Texto)
@@ -227,7 +259,7 @@ const adms = (prefix, sender) => {
 ┃│✰ ⋟ ${prefix}Rebaixar [@] (Rebaixar-adm)
 ┃│✰ ⋟ ${prefix}Changegroup (all/adms)
 ┃│✰ ⋟ ${prefix}Rmphotogp (Remover ft do gp)
-┃│✰ ⋟ ${prefix}Ephemeral [1/0] (Msg-temp)
+┃│✰ ⋟ ${prefix}Ephemeral (Desativar ou ativar as mensagens temporárias)
 ┃│✰ ⋟ ${prefix}Descgp (Texto)
 ┃│✰ ⋟ ${prefix}Nomegp (Nome)
 ┃│✰ ⋟ ${prefix}Totag (Mencionar algo)
@@ -237,17 +269,16 @@ const adms = (prefix, sender) => {
 ┃│✰ ⋟ ${prefix}Atividades (DO-GRUPO)
 ┃│✰ ⋟ ${prefix}Linkgp
 ┃│✰ ⋟ ${prefix}Grupoinfo
+┃│✰ ⋟ ${prefix}Blockcmdgp (cmd)
+┃│✰ ⋟ ${prefix}Unblockcmdgp (cmd)
+┃│✰ ⋟ ${prefix}Listbcmdgp
 ┃│✰ ⋟ ${prefix}Hidetag (txt) (marcação)
 ┃│✰ ⋟ ${prefix}Marcar (marca tds do gp)
 ┃│✰ ⋟ ${prefix}Marcar2 (Marca-tds-wa.me)
 ┃│✰ ⋟ ${prefix}Anagrama (1/0)
 ┃│✰ ⋟ ${prefix}Antipalavra (1/0)
-┃│✰ ⋟ ${prefix}Criartabela (Escreva-algo)
-┃│✰ ⋟ ${prefix}Tabelagp (Veja a tabela)
 ┃╰══ ⪨
-╰═══════════════════ ⪨
-
-`;
+╰═══════════════════ ⪨`;
 };
 
 exports.adms = adms;
@@ -268,8 +299,6 @@ return `​​​​​​​​​​​​​​​​​​​​​​​​
 ╭┤✰ ⋟ ${prefix}Bangp
 ┃│✰ ⋟ ${prefix}Unbangp
 ┃│✰ ⋟ ${prefix}Fotomenu (Marcar-img) 
-┃│✰ ⋟ ${prefix}Blockcmd (cmd)
-┃│✰ ⋟ ${prefix}Unblockcmd (cmd)
 ┃│✰ ⋟ ${prefix}Cmdpremlist
 ┃│✰ ⋟ ${prefix}Addcmdprem (cmd)
 ┃│✰ ⋟ ${prefix}Delcmdprem (cmd)
@@ -287,7 +316,6 @@ return `​​​​​​​​​​​​​​​​​​​​​​​​
 ┃│✰ ⋟ ${prefix}Infocmd_add (cmd/texto) 
 ┃│✰ ⋟ ${prefix}Infocmd_del (cmd) 
 ┃│✰ ⋟ ${prefix}Visualizarmsg
-┃│✰ ⋟ ${prefix}Console (Logs no terminal)
 ┃│✰ ⋟ ${prefix}Botoff (Funcionalidade do bot)
 ┃│✰ ⋟ ${prefix}Boton (Funcionalidade do bot)
 ┃│✰ ⋟ ${prefix}Verificado-global (Selos)
@@ -297,9 +325,29 @@ return `​​​​​​​​​​​​​​​​​​​​​​​​
 ┃│✰ ⋟ ${prefix}Ativo
 ┃│✰ ⋟ ${prefix}Rmpalavra_forca (palavra)
 ┃│✰ ⋟ ${prefix}Addpalavras_forca (titulo|tema|dica)
+┃│✰ ⋟ ${prefix}Listbcmdglobal - Lista de cmd block global.
+┃│✰ ⋟ ${prefix}Blockcmdg (comando) - Bloquear comando.
+┃│✰ ⋟ ${prefix}Unblockcmdg (comando) - Desbloquear comando.
+┃│✰ ⋟ ${prefix}Buscarsbcity (@marcar)
+┃│✰ ⋟ ${prefix}Addpix (numero/valor)
+┃│✰ ⋟ ${prefix}Setpix (numero/valor)
+┃│✰ ⋟ ${prefix}Delpix (numero/valor)
+┃│✰ ⋟ ${prefix}Zerarsc (numero)
+┃│✰ ⋟ ${prefix}Gerargf (code)
+┃│✰ ⋟ ${prefix}Delgf (code)
+┃│✰ ⋟ ${prefix}Addrent (558298.../dias)
+┃│✰ ⋟ ${prefix}Tirarrent (dias) - Remover dias adicionados no grupo...
+┃│✰ ⋟ ${prefix}Delrent - Remover o aluguel no grupo onde você usar.
+┃│✰ ⋟ ${prefix}Cortesia24 - Usar para dar 24h de cortesia.
+┃│✰ ⋟ ${prefix}Listrent - Lista dos grupos que estão alugados.
+┃│✰ ⋟ ${prefix}Lastrent - Top 3 de grupos que estão perto de vencer.
+┃│✰ ⋟ ${prefix}Codelistrent - Lista de Códigos gerados por você.
+┃│✰ ⋟ ${prefix}Gerarcoderent (558298.../dias)
+┃│✰ ⋟ ${prefix}Delcoderent (código)
+┃│✰ ⋟ ${prefix}Gerarcodecort - Gerar código de Cortesia 24horas.
 ┃│✰ ⋟ ${prefix}Ausente (fale-oq-faz)
-┃│✰ ⋟ ${prefix}Delpremium @(marca)
-┃│✰ ⋟ ${prefix}Addpremium @(marca)
+┃│✰ ⋟ ${prefix}Delpremium (@marcar/dias)
+┃│✰ ⋟ ${prefix}Addpremium (@marcar/dias)
 ┃│✰ ⋟ ${prefix}Privphotobot (all/cntt/ngm)
 ┃│✰ ⋟ ${prefix}Privaddgroup (all/cntt/ngm)
 ┃│✰ ⋟ ${prefix}Descriçãogp (digite-algo)
@@ -307,10 +355,16 @@ return `​​​​​​​​​​​​​​​​​​​​​​​​
 ┃│✰ ⋟ ${prefix}Unblock [@] (desbloquear) 
 ┃│✰ ⋟ ${prefix}Setprefix (prefixo-novo)
 ┃│✰ ⋟ ${prefix}Bcgp (TM-PRA-PV-MEMBROS)
+┃│✰ ⋟ ${prefix}Addlevel (quantidade)
+┃│✰ ⋟ ${prefix}Tirarlevel (quantidade)
+┃│✰ ⋟ ${prefix}Addxp (quantidade)
+┃│✰ ⋟ ${prefix}Tirarxp (quantidade)
+┃│✰ ⋟ ${prefix}Blocklevellist
+┃│✰ ⋟ ${prefix}Blocklevel (@marcar)
+┃│✰ ⋟ ${prefix}Unblocklevel (@marcar)
+┃│✰ ⋟ ${prefix}Rmlevel (@marcar)
 ┃╰══ ⪨
-╰═══════════════════ ⪨
-`;
-
+╰═══════════════════ ⪨`;
 };
 
 exports.menudono = menudono;
@@ -581,8 +635,7 @@ return`╭═══════════════════ ⪩
 ┃│✰ ⋟ ${prefix}Bass2 (marca)
 ┃│✰ ⋟ ${prefix}Vozmenino (marca)
 ┃╰══ ⪨
-╰═══════════════════ ⪨
-`;
+╰═══════════════════ ⪨`;
 };
 
 exports.alteradores = alteradores;
@@ -600,19 +653,22 @@ return `╭═══════════════════ ⪩
 ╰╦══════════════════ ⪨
 ╭┤✰ ⋟ ${prefix}Destrava
 ┃│✰ ⋟ ${prefix}Destrava2
-┃│✰ ⋟ ${prefix}Ddd (DDD)
-┃│✰ ⋟ ${prefix}GerarCPF
-┃│✰ ⋟ ${prefix}PremiumList
+┃│✰ ⋟ ${prefix}Listaddd (Número)
+┃│✰ ⋟ ${prefix}Gerarcpf
+┃│✰ ⋟ ${prefix}Premiumlist
 ┃│✰ ⋟ ${prefix}Tinyurl (Link)
 ┃│✰ ⋟ ${prefix}Cuttly (Link)
 ┃│✰ ⋟ ${prefix}Bitly (Link)
 ┃│✰ ⋟ ${prefix}Celular (Nome)
 ┃│✰ ⋟ ${prefix}Scep (Número)
 ┃│✰ ⋟ ${prefix}Cotacao (Moeda)
+┃│✰ ⋟ ${prefix}Dinextenso (Valor)
 ┃│✰ ⋟ ${prefix}Sip (Número)
+┃│✰ ⋟ ${prefix}Validarcnpj (número)
+┃│✰ ⋟ ${prefix}Igstalk (@usuário)
+┃│✰ ⋟ ${prefix}Validarcpf (número)
 ┃╰══ ⪨
-╰═══════════════════ ⪨
-`;
+╰═══════════════════ ⪨`;
 };
 
 exports.menuprem = menuprem;
@@ -624,11 +680,35 @@ const brincadeiras = (prefix, sender) => {
 // NÃO APAGUE ESSE ${prefix}, não coloque nada ${dentro assim} ISSO SÃO DEFINIÇÕES QUE ESTÁ PUXANDO DO settings.json, da pasta dono, só pode altera a base de tudo, menos as definições, só se quiser apagar a definição completa. 
 
 return `​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​╭═══════════════════ ⪩
-╰╮き⃟✰𝐌𝐄𝐍𝐔-𝐁𝐑𝐈𝐍𝐂𝐀𝐃𝐄𝐈𝐑𝐀𝐒✰⃟⃟き
+╰╮き⃟✰𝐁𝐑𝐈𝐍𝐂𝐀𝐃𝐄𝐈𝐑𝐀𝐒✰⃟⃟き
 ╭┤✰ ⋟ Usuário: @${sender.split("@")[0]}
 ┃╰══ ⪨
 ╰╦══════════════════ ⪨
-╭┤✰ ⋟ ${prefix}Gay (marca (@))
+╭┤き⃟✰𝐉𝐎𝐆𝐎𝐒✰⃟⃟き
+┃│✰ ⋟ ${prefix}Jogodavelha (@Marcar) 
+┃│✰ ⋟ ${prefix}Anagrama (1/0)
+┃│✰ ⋟ ${prefix}Gartic (1/0)
+┃│✰ ⋟ ${prefix}Whatmusic (1/0)
+┃│✰ ⋟ ${prefix}Quizanimal (1/0)
+┃│✰ ⋟ ${prefix}Enigma (1/0)
+┃│✰ ⋟ ${prefix}R-forca (Letra)
+┃│✰ ⋟ ${prefix}Resetforca (Resetar)
+┃│✰ ⋟ ${prefix}Jogodaforca (Iniciar)
+┃│✰ ⋟ ${prefix}Vab (Você prefere?)
+┃│✰ ⋟ ${prefix}Eununca (Eu nunca, eu já)
+┃│✰ ⋟ ${prefix}Ppt (Pedra/Papel/Tesoura) 
+┃│✰ ⋟ ${prefix}Cassino
+┃│✰ ⋟ ${prefix}Mina (coordenada(s))
+┃│✰ ⋟ ${prefix}Minado (dificuldade)
+┃│✰ ⋟ ${prefix}Minareset (resetar)
+┃│✰ ⋟ ${prefix}Mineshelp (info)
+┃│✰ ⋟ ${prefix}Minatips (dicas)
+┃│✰ ⋟ ${prefix}Akinator (iniciar jogo)
+┃│✰ ⋟ ${prefix}Resetaki (resetar akinator)
+┃╰══ ⪨
+╰╦══════════════════ ⪨
+╭┤き⃟✰𝐁𝐑𝐈𝐍𝐂𝐀𝐃𝐄𝐈𝐑𝐀𝐒✰⃟⃟き
+┃│✰ ⋟ ${prefix}Gay (marca (@))
 ┃│✰ ⋟ ${prefix}Feio (marca (@))
 ┃│✰ ⋟ ${prefix}Corno (marca (@))
 ┃│✰ ⋟ ${prefix}Vesgo (marca (@))
@@ -643,21 +723,13 @@ return `​​​​​​​​​​​​​​​​​​​​​​​​
 ┃│✰ ⋟ ${prefix}Nazista (marca (@))
 ┃│✰ ⋟ ${prefix}Chance (fale algo) 
 ┃│✰ ⋟ ${prefix}Surubao (Quantidade) 
-┃│✰ ⋟ ${prefix}Jogodavelha (@Marcar) 
-┃│✰ ⋟ ${prefix}Anagrama (1/0)
-┃│✰ ⋟ ${prefix}Gartic (1/0)
-┃│✰ ⋟ ${prefix}Quizanimal (1/0)
-┃│✰ ⋟ ${prefix}Enigma (1/0)
 ┃│✰ ⋟ ${prefix}Casal (Casal do grupo)
-┃│✰ ⋟ ${prefix}R-forca (Letra)
-┃│✰ ⋟ ${prefix}Resetforca (Resetar)
-┃│✰ ⋟ ${prefix}Jogodaforca (Inicia)
-┃│✰ ⋟ ${prefix}Ppt (Pedra/Papel/Tesoura) 
-┃│✰ ⋟ ${prefix}Cassino
-┃│✰ ⋟ ${prefix}Apostar (Valor = 50)
-┃│✰ ⋟ ${prefix}Pescar (Ganhar coin)
-┃│✰ ⋟ ${prefix}Churrasco (Ganhar coin)
 ┃│✰ ⋟ ${prefix}Quando (Perguntar)
+┃│✰ ⋟ ${prefix}Mencionar (fale algo)
+┃│✰ ⋟ ${prefix}Death (Nome)
+┃╰══ ⪨
+╰╦══════════════════ ⪨
+╭┤き⃟✰𝐓𝐎𝐏 𝟓 - 𝐑𝐀𝐍𝐊✰⃟⃟き
 ┃│✰ ⋟ ${prefix}Rankgay (5 gays)
 ┃│✰ ⋟ ${prefix}Rankgado (5 gados)
 ┃│✰ ⋟ ${prefix}Rankcorno (5 cornos)
@@ -666,16 +738,54 @@ return `​​​​​​​​​​​​​​​​​​​​​​​​
 ┃│✰ ⋟ ${prefix}Ranknazista (5 nazistas)
 ┃│✰ ⋟ ${prefix}Rankotakus (5 otakus)
 ┃│✰ ⋟ ${prefix}Rankpau (5 pauzudos)
-┃│✰ ⋟ ${prefix}Mencionar (fale algo)
-┃│✰ ⋟ ${prefix}Death (Nome)
-┃│✰ ⋟ ${prefix}Steal (marca (@))
-┃│✰ ⋟ ${prefix}Hackear (marca (@))
 ┃╰══ ⪨
-╰═══════════════════ ⪨
-`;
+╰═══════════════════ ⪨`;
 };
 
 exports.brincadeiras = brincadeiras;
+
+// MENU RPG DA SABCITY
+
+const rpgmenu = (prefix, sender) => {
+
+// NÃO APAGUE ESSE ${prefix}, não coloque nada ${dentro assim} ISSO SÃO DEFINIÇÕES QUE ESTÁ PUXANDO DO settings.json, da pasta dono, só pode altera a base de tudo, menos as definições, só se quiser apagar a definição completa. 
+
+return `╭═══════════════════ ⪩
+╰╮き⃟✰𝐒𝐀𝐁-𝐂𝐈𝐓𝐘-𝐎𝐅𝐈𝐂𝐈𝐀𝐋✰⃟⃟き
+╭┤✰ ⋟ Usuário: @${sender.split("@")[0]}
+┃╰══ ⪨
+╰╦══════════════════ ⪨
+╭┤✰ ⋟ ${prefix}Lojadecavalos (Loja de RPG sobre cavalos)
+┃│✰ ⋟ ${prefix}Estabulo (Informações sobre seus cavalos)
+┃│✰ ⋟ ${prefix}Lojadegalos (Loja de RPG sobre galos)
+┃│✰ ⋟ ${prefix}Galos (Informações sobre seus galos)
+┃│✰ ⋟ ${prefix}Galinheiro (Informações sobre suas galinhas)
+┃│✰ ⋟ ${prefix}Cruzargg (Cruzar, ou seja, você já sabe)
+┃│✰ ⋟ ${prefix}Dadoapostado (dado/valor da aposta)
+┃│✰ ⋟ ${prefix}Caracoroa (lado/valor da aposta)
+┃│✰ ⋟ ${prefix}Modosabrpg (1/0) - Ativar recurso no grupo.
+┃│✰ ⋟ ${prefix}Rgsabcity (Nome) - Funciona somente com o modo ativo.
+┃│✰ ⋟ ${prefix}Sairsabcity (Apagar seus registros) - Funciona somente com o modo ativo.
+┃│✰ ⋟ ${prefix}Rpglistgp (Lista de registrados na Sab's City no grupo)
+┃│✰ ⋟ ${prefix}Meusabcity (Suas informações)
+┃│✰ ⋟ ${prefix}Minhacarteira (Informações Bancárias)
+┃│✰ ⋟ ${prefix}Ranksabcity (Os 10 mais ricos da Sab's City)
+┃│✰ ⋟ ${prefix}Codelist (Lista de Códigos GiftCards)
+┃│✰ ⋟ ${prefix}Resgatargf (code)
+┃│✰ ⋟ ${prefix}Fazerpix (número/valor)
+┃│✰ ⋟ ${prefix}Chavepix (@marcar o usuário)
+┃│✰ ⋟ ${prefix}Meupix (Sua chave pix na SabCity)
+┃│✰ ⋟ ${prefix}Cassino (valor da aposta)
+┃│✰ ⋟ ${prefix}1xbcbets (valor da aposta)
+┃│✰ ⋟ ${prefix}Assaltar (@marcar)
+┃│✰ ⋟ ${prefix}Minerar
+┃│✰ ⋟ ${prefix}Retirar (Caso você seja preso pelo comando assaltar)
+┃│✰ ⋟ ${prefix}Trocarbanco 
+┃╰══ ⪨
+╰═══════════════════ ⪨`
+}
+
+exports.rpgmenu = rpgmenu;
 
 // MENU DE EFEITOS DE IMAGEM
 
@@ -709,9 +819,9 @@ return `​​​​​​​​​​​​​​​​​​​​​​​​
 ┃│✰ ⋟ ${prefix}Wanted (marcar)-(img) 
 ┃│✰ ⋟ ${prefix}Wasted (marcar)-(img) 
 ┃│✰ ⋟ ${prefix}Animeia (marcar)-(img)
+┃│✰ ⋟ ${prefix}Zombieia (marcar)-(img)
 ┃╰══ ⪨
-╰═══════════════════ ⪨
-`;
+╰═══════════════════ ⪨`;
 };
 
 exports.efeitos = efeitos;
@@ -784,8 +894,8 @@ return `​​​​​​​​​​​​​​​​​​​​​​​​
 ┃│✰ ⋟ ${prefix}Animeimage -megumin
 ┃│✰ ⋟ ${prefix}Animeimage -toukachan
 ┃╰══ ⪨
-╰═══════════════════ ⪨
-`;
+╰═══════════════════ ⪨`;
+
 };
 
 exports.animes = animes;

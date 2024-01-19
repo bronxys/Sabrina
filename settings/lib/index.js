@@ -1,5 +1,5 @@
 module.exports = {
 linguagem: linguagem = require('./menus.js'),
 mess: mess = require('./global.js'),
-inform: inform = require('./infodono.js')
+getInfo: getInfo = require('./info_global.js')
 }

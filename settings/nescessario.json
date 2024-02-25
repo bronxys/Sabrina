@@ -5,8 +5,10 @@
   "menu_audio": false,
   "verificado": true,
   "anticall": false,
+  "modo_aluguel": false,
   "visualizarmsg": true,
   "listanegraG": [],
+  "listabrancaG": [],
   "cmd_premium": [
     "destrava",
     "destrava2",
@@ -22,7 +24,9 @@
     "igstalk",
     "validarcpf",
     "validarcnpj",
-    "dinextenso"
+    "dinextenso",
+    "igsh",
+    "igsh2"
   ],
   "blockCmdG": [],
   "msgantipv1": "Sinto muito *#nome#*, mas meu dono não permitiu eu responder ninguém, então terei que bloquear você... ;)",
@@ -30,7 +34,7 @@
   "TEMPO_DE_CMD": "Aguarde #tempo# segundos até executar outro comando, tempo a concluir:\n• #tempocmd#",
   "API_KEY_INVERTEXTO": "6117|oJqDz5g3Uf91zuiAo8FiZzXpHlLGrVEV",
   "numero_dono1": ".",
-  "numero_dono2": ".",
+  "numero_dono2": "558299553530",
   "numero_dono3": ".",
   "numero_dono4": ".",
   "numero_dono5": ".",

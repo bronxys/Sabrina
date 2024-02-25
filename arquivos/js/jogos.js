@@ -1,344 +1,207 @@
 const fs = require('fs')
 
 exports.palavrasANA = [
-{
-original: 'PARADOXO',
-embaralhada: 'XOPARODA',
-dica: 'CANAL'
-},
-{
-original: 'ESCADA',
-embaralhada: 'CAESDA',
-dica: 'OBJETO'
-},
-{
-original: 'AKAME',
-embaralhada: 'MEAKA',
-dica: 'PERSONAGEM'
-},
-{
-original: 'NAGATORO',
-embaralhada: 'GATONARO',
-dica: 'PERSONAGEM'
-},
-{
-original: 'SASUKE',
-embaralhada: 'KESUSA',
-dica: 'PERSONAGEM'
-},
-{
-original: 'GAY',
-embaralhada: 'YAG',
-dica: 'VOCÊ'
-},
-{
-original: 'CIMENTO',
-embaralhada: 'OMCNITE',
-dica: 'CONSTRUÇÕES'
-},
-{
-original: 'BANANA',
-embaralhada: 'NABANA',
-dica: 'COMIDA'
-},
-{
-original: 'NETFLIX',
-embaralhada: 'TFLIXNE',
-dica: 'APLICATIVO'
-},
-{
-original: 'YOUTUBE',
-embaralhada: 'TUBEYOU',
-dica: 'APLICATIVO'
-},
-{
-original: 'PORTUGAL',
-embaralhada: 'TUGALPOR',
-dica: 'PAÍS'
-},
-{
-original: 'PISTOLA',
-embaralhada: 'TOPISLA',
-dica: 'OBJETO'
-},
-		
-{
-original: 'CAMARÃO',
-embaralhada: 'MARÃOCA',
-dica: 'COMIDA'
-},
-{
-original: 'HIDRANTE',
-embaralhada: 'TEHDIRAN',
-dica: 'OBJETO'
-},
-{
-original: 'FOGUETE',
-embaralhada: 'TEFOGUE',
-dica: 'OBJETO'
-},
-{
-original: 'SKATE',
-embaralhada: 'TEASK',
-dica: 'OBJETO'
-},
-{
-original: 'MACACO',
-embaralhada: 'CACOMA',
-dica: 'ANIMAL'
-},
-{
-original: 'LASANHA',
-embaralhada: 'NHASALA',
-dica: 'COMIDA'
-},
-{
-original: 'PASTEL',
-embaralhada: 'PATELS',
-dica: 'COMIDA'
-},
-{
-original: 'COXINHA',
-embaralhada: 'XICONHA',
-dica: 'COMIDA'
-},
-{
-original: 'BICICLETA',
-embaralhada: 'CIBITACLE',
-dica: 'OBJETO'
-},
-{
-original: 'SASUKE',
-embaralhada: 'ESASUK',
-dica: 'PERSONAGEM'
-},
-{
-original: 'CAVALO',
-embaralhada: 'LACAVO',
-dica: 'ANIMAL'
-},
-{
-original: 'LEVI',
-embaralhada: 'EVIL',
-dica: 'PERSONAGEM'
-},
-{
-original: 'KAMAITACHI',
-embaralhada: 'TAICAMAKHI',
-dica: 'CANTOR'
-},
-{
-original: 'LUBA',
-embaralhada: 'UBAL',
-dica: 'YOUTUBER'
-},
-{
-original: 'GRÊMIO',
-embaralhada: 'OMÊGRI',
-dica: 'TIME'
-},
-{
-original: 'SATURNO',
-embaralhada: 'UTARSON',
-dica: 'PLANETA'
-},
-{
-original: 'MIKASA',
-embaralhada: 'KAMISA',
-dica: 'PERSONAGEM'
-},
-{
-original: 'LEÃO',
-embaralhada: 'OLEÃ',
-dica: 'ANIMAL'
-},
-{
-original: 'SAKURA',
-embaralhada: 'SUKARA',
-dica: 'PERSONAGEM'
-},
-{
-original: 'HADES',
-embaralhada: 'SEDAH',
-dica: 'MITOLOGIA'
-},
-{
-original: 'CORRIDA',
-embaralhada: 'ARROCID',
-dica: 'ESPORTE'
-},
-{
-original: 'ODIN',
-embaralhada: 'NODI',
-dica: 'MITOLOGIA'
-},
-{
-original: 'BICICLETA',
-embaralhada: 'CIBITACLE',
-dica: 'OBJETO'
-},
-{
-original: 'BICICLETA',
-embaralhada: 'CIBITACLE',
-dica: 'OBJETO'
-},
-{
-original: 'GUATEMALA',
-embaralhada: 'LATEMAGUA',
-dica: 'PAÍS'
-},
-{
-original: 'CEREJA',
-embaralhada: 'ECREJA',
-dica: 'FRUTA'
-},
-{
-original: 'VENEZUELA',
-embaralhada: 'ZUNEEVELA',
-dica: 'PAÍS'
-},
-{
-original: 'HISTÓRIA',
-embaralhada: 'TÓRISIAH',
-dica: 'MATÉRIA'
-},
-{
-original: 'INSTAGRAM',
-embaralhada: 'TAGRAMINS',
-dica: 'APLICATIVO'
-},
-{
-original: 'WHATSAPP',
-embaralhada: 'TSWHAAPP',
-dica: 'APLICATIVO'
-},
-{
-original: 'HIDRANTE',
-embaralhada: 'TEHDIRAN',
-dica: 'OBJETO'
-},
-{
-original: 'CELULAR',
-embaralhada: 'CELARLU',
-dica: 'OBJETO'
-},
-{
-original: 'NOTEBOOK',
-embaralhada: 'TENOBOOK',
-dica: 'OBJETO'
-},
-{
-original: 'COMPUTADOR',
-embaralhada: 'PUCOMDORTA',
-dica: 'OBJETO'
-},
-{
-original: 'LANTERNA',
-embaralhada: 'TERLANNA',
-dica: 'OBJETO'
-},
-{
-original: 'CACHORRO',
-embaralhada: 'HRROAOCC',
-dica: 'ANIMAL'
-},
-{
-original: 'DESENTUPIDOR',
-embaralhada: 'SENDETUDORPI',
-dica: 'OBJETO'
-},
-{
-original: 'TOMATE',
-embaralhada: 'ATEMOT',
-dica: 'ALIMENTO'
-},
-{
-original: 'SAXOFONE',
-embaralhada: 'ASXOEOFN',
-dica: 'INSTRUMENTO MUSICAL'
-},
-{
-original: 'CAZAQUISTÃO',
-embaralhada: 'ZAACQIUSÃOT',
-dica: 'PAÍS'
-},
-{
-original: 'CROÁCIA',
-embaralhada: 'CRCÁOAI',
-dica: 'PAÍS'
-},
-{
-original: 'HUNGRIA',
-embaralhada: 'UHGINRA',
-dica: 'PAÍS'
-},
-{
-original: 'MEGAFONE',
-embaralhada: 'MOEFGNEA',
-dica: 'OBJETO'
-},
-{
-original: 'CINTURA',
-embaralhada: 'RCIANUT',
-dica: 'CORPO HUMANO'
-},
-{
-original: 'ABDÔMEN',
-embaralhada: 'MBÔDENA',
-dica: 'CORPO HUMANO'
-},
-{
-original: 'VAGNER',
-embaralhada: 'GNEVAR',
-dica: 'NOME'
-},
-{
-original: 'ALEATORY',
-embaralhada: 'YRTALOEA',
-dica: 'NOME'
-},
-{  
-original: 'CAFIN',
-embaralhada: 'NFCIA',
-dica: 'TIPO DE GAY'
-},
-{    
-original: 'KONEKO',
-embaralhada: 'NOEKKO',
-dica: 'NOME'
-},
-{
-original: 'RAPOSA',
-embaralhada: 'APRSAO',
-dica: 'ANIMAL'
-},
-{
-original: 'INFERNO',
-embaralhada: 'RNOFNIE',
-dica: 'LUGAR'
-},
-{   
-original: 'RINOCERONTE',
-embaralhada: 'NTERRECNIOO',
-dica: 'ANIMAL'
-},
-{ 
-original: 'PASTOR',
-embaralhada: 'STRPAO',
-dica: 'BATIZADO'
-},
-{
-original: 'BONITO',
-embaralhada: 'NTBIOO',
-dica: 'COMENTÁRIO'
-},
-{       
-original: 'TANGERINA',
-embaralhada: 'RITAANGNE',
-dica: 'ALIMENTO'
-}
-]	
-
+    {
+      palavraOriginal: "AMOR",
+      resposta: "Amor",
+      dica: "É um sentimento mais profundo, duradouro e estável baseado numa relação de reciprocidade e cuidado."
+    },
+    {
+      palavraOriginal: "BRASIL",
+      resposta: "Brasil",
+      dica: "Maior país da América Latina, conhecido por sua diversidade cultural."
+    },    
+    {
+      palavraOriginal: "PORTUGAL",
+      resposta: "Portugal",
+      dica: "É o Estado-Nação mais antigo da Europa e um dos mais antigos do mundo."
+    },
+    {
+      palavraOriginal: "HIDRANTE",
+      resposta: "Hidrante",
+      dica: "Tem como finalidade o combate ao fogo, proteção de vidas e do patrimônio."
+    },
+    {
+      palavraOriginal: "BANANA",
+      resposta: "Banana",
+      dica: "Por ser um fruto partenocárpico, não possui sementes, com exceção de uma espécie vendida no mercado indonésio, a Musa balbisiana."
+    },
+    {
+      palavraOriginal: "CIMENTO",
+      resposta: "Cimento",
+      dica: "É um pó fino com propriedades aglomerantes, aglutinantes ou ligantes, que se enrijece ao entrar em contato com a água."
+    },
+    {
+      palavraOriginal: "SATURNO",
+      resposta: "Saturno",
+      dica: "É o segundo maior planeta do Sistema Solar, com 9 vezes o tamanho da Terra."
+    },
+    {
+      palavraOriginal: "CAMARÃO",
+      resposta: "Camarão",
+      dica: "É um fruto do mar, especificando o tipo são crustáceos."
+    },
+    {
+      palavraOriginal: "YOUTUBE",
+      resposta: "YouTube",
+      dica: "É um aplicativo que tem uma diversidade de vídeos e músicas."
+    },
+    {
+      palavraOriginal: "PISTOLA",
+      resposta: "Pistola",
+      dica: "Modernamente podemos conceituar como arma curta, raiada, portátil."
+    },
+    {
+      palavraOriginal: "SKATE",
+      resposta: "Skate",
+      dica: "É constituído uma prancha, quatro rodinhas e dois eixos que prendem as rodas."
+    },
+    {
+      palavraOriginal: "HADES",
+      resposta: "Hades",
+      dica: "Mitologia, era visto como um deus insensível, impiedoso e repugnante."
+    },
+    {
+      palavraOriginal: "PERSÉFONE",
+      resposta: "Perséfone",
+      dica: "Mitologia, deusa das ervas, flores, frutos e perfumes, filha de Zeus e Deméter."
+    },
+    {
+      palavraOriginal: "PASTEL",
+      resposta: "Pastel",
+      dica: "É um alimento composto por uma massa à base de farinha de trigo a que se dá a forma de um envelope."      
+    },
+    {
+      palavraOriginal: "KAMAITACHI",
+      resposta: "Kamaitachi",
+      dica: "É cantor e compositor Brasileiro do estado de RJ, suas músicas começaram a fazer sucesso após o lançamento de Manual do Suicidio, em 4 de janeiro de 2018."
+    },
+    {
+      palavraOriginal: "IRACEMA",
+      resposta: "Iracema",
+      dica: "É um romance escrito em 1865, a virgem dos lábios de mel, que tinha os cabelos mais negros que a asas da graúna e mais longos que seu talhe de palmeira."
+    },
+    {
+      palavraOriginal: "NETFLIX",
+      resposta: "Netflix",
+      dica: "Aplicativo de Streaming, a partir de R$19,90 o plano mais básico..."
+    },
+    {
+      palavraOriginal: "GUATEMALA",
+      resposta: "Guatemala",
+      dica: "A cultura indígena domina o país, sobretudo no interior e essa composição torna o país diferente de seus vizinhos."
+    },
+    {
+      palavraOriginal: "LUBA",
+      resposta: "Luba",
+      dica: "O criador de conteúdo produz vídeos de humor com reações, desafios e jogo, além de collabs com outros criadores de conteúdo com quem arranca muitas risadas! Atualmente o criador está com 8.8M de inscritos no aplicativo YouTube!"
+    },
+    {
+      palavraOriginal: "SAXOFONE",
+      resposta: "Saxofone",
+      dica: "Instrumento Musical"
+    },
+    {
+      palavraOriginal: "AMEIXA",
+      resposta: "Ameixa",
+      dica: "É uma fruta que possui alto valor nutritivo, é rica em açúcar, sais minerais (cálcio, fósforo e ferro) e algumas vitaminas."
+    },
+    {
+      palavraOriginal: "MACEIÓ",
+      resposta: "Maceió",
+      dica: "É uma cidade do Brasil, a capital do estado do Nordeste e conhecida por suas praias e belezas naturais."
+    },
+    {
+      palavraOriginal: "PANFLETOS",
+      resposta: "Panfletos",
+      dica: "São objetos usados para ler e geralmente são feitos de papel."
+    },
+    {
+      palavraOriginal: "ESCOLA",
+      resposta: "Escola",
+      dica: "É um ambiente de formação e educação, geralmente frequentado por crianças e adolescentes."
+    },
+    {
+      palavraOriginal: "ITÁLIA",
+      resposta: "Itália",
+      dica: "É um país do continente europeu, um país românico e também é conhecido por sua arte e arquitetura."
+    },
+    {
+      palavraOriginal: "FRANÇA",
+      resposta: "França",
+      dica: "É um país do continente europeu, conhecido por sua moda e gastronomia."
+    },
+    {
+      palavraOriginal: "ÓDIO",
+      resposta: "Ódio",
+      dica: "É um sentimento negativo e também conhecido por sua tristeza e dor."
+    },
+    {
+      palavraOriginal: "DIABO",
+      resposta: "Diabo",
+      dica: "É uma divindade maligna, conhecido por sua maldade e crueldade."
+    },
+    {
+      palavraOriginal: "DEUS",
+      resposta: "Deus",
+      dica: "É uma divindade suprema, conhecido por sua onipotência e onisciência."
+    },
+    {
+      palavraOriginal: "INFERNO",
+      resposta: "Inferno",
+      dica: "É um lugar mitológico, conhecido por seu fogo e sofrimento."
+    },
+    {
+      palavraOriginal: "PARAÍSO",
+      resposta: "Paraíso",
+      dica: "É um lugar mitológico, conhecido por sua beleza e perfeição."
+    },
+    {
+      palavraOriginal: "ELDORADO",
+      resposta: "Eldorado",
+      dica: "É uma cidade mítica, conhecida por seu ouro e riquezas."
+    },
+    {
+      palavraOriginal: "BABILÔNIA",
+      resposta: "Babilônia",
+      dica: "É uma cidade da Mesopotâmia, conhecida por sua riqueza e cultura."
+    },
+    {
+      palavraOriginal: "GOMORRA",
+      resposta: "Gomorra",
+      dica: "É uma cidade bíblica, conhecida por sua depravação e pecado."
+    },
+   {
+      palavraOriginal: "ALEMANHA",
+      resposta: "Alemanha",
+      dica: "É um país germânico do continente europeu, ele é basicamente conhecido por sua tecnologia e indústria."
+    },
+    {
+      palavraOriginal: "SOL",
+      resposta: "Sol",
+      dica: "É uma estrela, a fonte de luz e calor da Terra e também conhecido por sua importância para a vida."
+    },
+    {
+      palavraOriginal: "ESTRELA",
+      resposta: "Estrela",
+      dica: "É um corpo celeste luminoso, conhecido por sua beleza e variedade."
+    },
+    {
+      palavraOriginal: "MONTANHA",
+      resposta: "Montanha",
+      dica: "É uma elevação do terreno, conhecida por sua beleza e majestade."
+    },
+    {
+      palavraOriginal: "VULCANO",
+      resposta: "Vulcano",
+      dica: "É uma montanha que expele lava e gases, conhecida por sua força e destruição."
+    },
+    {
+      palavraOriginal: "ANIVERSÁRIO",
+      resposta: "Aniversário",
+      dica: "Um momento de alegria e celebração."
+    }
+]
 
 exports.showdomilhao = [
 {
@@ -352,414 +215,559 @@ foto: 'https://telegra.ph/file/1530a82843034f1ede5d5.jpg'
 ]	
 
 exports.quizanimais = [
-{
-original: 'PORQUINHO DA ÍNDIA',
-foto: 'https://telegra.ph/file/617e247a4fbb63d299198.jpg'
-},
-{
-original: 'HAMSTER',
-foto: 'https://telegra.ph/file/a478979f342ac1746a645.jpg'
-},
-{
-original: 'ROTTWEILER',
-foto: 'https://telegra.ph/file/a10ad7df6ab6a2312a1f9.jpg'
-},
-{
-original: 'FLOPPA',
-foto: 'https://telegra.ph/file/7633abcd83b8a587f418d.jpg'
-},
-{
-original: 'GUAXINIM',
-foto: 'https://telegra.ph/file/3800c7048d04a1c3dbc4e.jpg'
-},
-{
-original: 'ZEBRA',
-foto: 'https://telegra.ph/file/a08e224344e34aa916972.jpg'
-},
-{
-original: 'CARNEIRO',
-foto: 'https://telegra.ph/file/096342c8c7815ba9d83be.jpg'
-},
-{
-original: 'BODE',
-foto: 'https://telegra.ph/file/ff574a82178089f453444.jpg'
-},
-{
-original: 'MAMUTE',
-foto: 'https://telegra.ph/file/00e445dde6c036a0c0df5.jpg'
-},
-{
-original: 'ALPACA',
-foto: 'https://telegra.ph/file/a201b23b179392f1cdd7f.jpg'
-},
-{
-original: 'PORCO ESPINHO',
-foto: 'https://telegra.ph/file/7b180efc77c8ab6e9a24a.jpg'
-},
-{
-original: 'QUOKKA',
-foto: 'https://telegra.ph/file/3042e66a22c6d0fb6e0cd.jpg'
-},
-{
-original: 'PANDA VERMELHO',
-foto: 'https://telegra.ph/file/a6517debde47b846073cc.jpg'
-},
-{
-original: 'PEIXE GOTA',
-foto: 'https://telegra.ph/file/e8892204b373c147bf489.jpg'
-},
-{
-original: 'PEIXE MANDARIM',
-foto: 'https://telegra.ph/file/e8892204b373c147bf489.jpg'
-},
-{
-original: 'DRAGÃO DE KOMODO',
-foto: 'https://telegra.ph/file/d4c36b449f4c781533f3c.jpg'
-},
-{
-original: 'LEOPARDO',
-foto: 'https://telegra.ph/file/0016017b9d28a3b6d027a.jpg'
-},
-{
-original: 'FURÃO',
-foto: 'https://telegra.ph/file/e352b4831db11c20a3c62.jpg'
-},
-{
-original: 'LEOPARDO',
-foto: 'https://telegra.ph/file/71f5f532ced0fddc08f5b.jpg'
-},
-{
-original: 'LEBRE',
-foto: 'https://telegra.ph/file/89f9a46ce660261279477.jpg'
-},
-{
-original: 'MARRECO',
-foto: 'https://telegra.ph/file/aa41bde6c4c350ec9d0d4.jpg'
-},
-{
-original: 'GANSO',
-foto: 'https://telegra.ph/file/9ab69884414feefc9c109.jpg'
-},
-{
-original: 'CAVALO MARINHO',
-foto: 'https://telegra.ph/file/e4cee57d5b731dfffa5d8.jpg'
-},
-{
-original: 'CROCODILO',
-foto: 'https://telegra.ph/file/b4483f9a7077fd29a137f.jpg'
-},
-{
-original: 'ORNITORRINCO',
-foto: 'https://telegra.ph/file/8ffdd62da1834433112be.jpg'
-},
-{
-original: 'HUSKY SIBERIANO',
-foto: 'https://telegra.ph/file/07b98023259637951ba8f.jpg'
-},
-{
-original: 'CAPIVARA',
-foto: 'https://telegra.ph/file/54f20cbd80737fe45a284.jpg'
-}
+    {
+      question: "Qual é o animal apresentado na imagem?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Porquinho da índia",
+      original: "PORQUINHO DA ÍNDIA",
+      foto: "https://telegra.ph/file/617e247a4fbb63d299198.jpg",
+    },
+    {
+      question: "Qual é o animal apresentado na imagem?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Hamster",
+      original: "HAMSTER",
+      foto: "https://telegra.ph/file/a478979f342ac1746a645.jpg"
+    },
+    {
+      question: "Qual é o animal apresentado na imagem?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Rottweiler",
+      original: "ROTTWEILER",
+      foto: "https://telegra.ph/file/a10ad7df6ab6a2312a1f9.jpg"
+    },
+    {
+      question: "Qual é o animal apresentado na imagem?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Floppa",
+      original: "FLOPPA",
+      foto: "https://telegra.ph/file/7633abcd83b8a587f418d.jpg"
+    },
+    {
+      question: "Qual é o animal apresentado na imagem?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Guaxinim",
+      original: "GUAXINIM",
+      foto: "https://telegra.ph/file/3800c7048d04a1c3dbc4e.jpg"
+    },
+    {
+      question: "Qual é o animal apresentado na imagem?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Zebra",
+      original: 'ZEBRA',
+      foto: "https://telegra.ph/file/a08e224344e34aa916972.jpg"
+    },
+    {
+      question: "Qual é o animal apresentado na imagem?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Carneiro",
+      original: "CARNEIRO",
+      foto: "https://telegra.ph/file/096342c8c7815ba9d83be.jpg"
+    },
+    {
+      question: "Qual é o animal apresentado na imagem?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Bode",
+      original: 'BODE',
+      foto: 'https://telegra.ph/file/ff574a82178089f453444.jpg'
+    },
+    {
+      question: "Qual é o animal apresentado na imagem?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Mamute",    
+      original: "MAMUTE",
+      foto: "https://telegra.ph/file/00e445dde6c036a0c0df5.jpg"
+    },
+    {
+     question: "Qual é o animal apresentado na imagem?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+     resposta: "Alpaca",    
+     original: "ALPACA",
+     foto: "https://telegra.ph/file/a201b23b179392f1cdd7f.jpg"
+    },
+    {
+      question: "Qual é o animal apresentado na imagem?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Porco Espinho",    
+      original: 'PORCO ESPINHO',
+      foto: 'https://telegra.ph/file/7b180efc77c8ab6e9a24a.jpg'
+    },
+    {
+      question: "Qual é o animal apresentado na imagem?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Quokka",    
+      original: 'QUOKKA',
+      foto: 'https://telegra.ph/file/3042e66a22c6d0fb6e0cd.jpg'
+    },
+    {
+      question: "Qual é o animal apresentado na imagem?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Panda Vermelho",    
+      original: 'PANDA VERMELHO',
+      foto: 'https://telegra.ph/file/a6517debde47b846073cc.jpg'
+    },
+    {
+      question: "Qual é o animal apresentado na imagem?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Peixe Gota",
+      original: "PEIXE GOTA",
+      foto: "https://telegra.ph/file/e8892204b373c147bf489.jpg"
+    },
+    {
+      question: "Qual é o animal apresentado na imagem?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Peixe Mandarim",
+      original: "PEIXE MANDARIM",
+      foto: "https://telegra.ph/file/e8892204b373c147bf489.jpg"
+    },
+    {
+      question: "Qual é o animal apresentado na imagem?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Dragão de Komodo",
+      original: "DRAGÃO DE KOMODO",
+      foto: "https://telegra.ph/file/d4c36b449f4c781533f3c.jpg"
+    },
+    {
+      question: "Qual é o animal apresentado na imagem?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Leopardo",
+      original: "LEOPARDO",
+      foto: "https://telegra.ph/file/0016017b9d28a3b6d027a.jpg"
+    },
+    {
+      question: "Qual é o animal apresentado na imagem?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Furão",
+      original: 'FURÃO',
+      foto: 'https://telegra.ph/file/e352b4831db11c20a3c62.jpg'
+    },
+    {
+      question: "Qual é o animal apresentado na imagem?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Lebre",
+      original: 'LEBRE',
+      foto: 'https://telegra.ph/file/89f9a46ce660261279477.jpg'
+    },
+    {
+      question: "Qual é o animal apresentado na imagem?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Marreco",
+      original: 'MARRECO',
+      foto: 'https://telegra.ph/file/aa41bde6c4c350ec9d0d4.jpg'
+    },
+    {
+      question: "Qual é o animal apresentado na imagem?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Ganso",
+      original: 'GANSO',
+      foto: 'https://telegra.ph/file/9ab69884414feefc9c109.jpg'
+    },
+    {
+      question: "Qual é o animal apresentado na imagem?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Cavalo Marinho",
+      original: 'CAVALO MARINHO',
+      foto: 'https://telegra.ph/file/e4cee57d5b731dfffa5d8.jpg'
+    },
+    {
+      question: "Qual é o animal apresentado na imagem?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Crocodilo",
+      original: 'CROCODILO',
+      foto: 'https://telegra.ph/file/b4483f9a7077fd29a137f.jpg'
+    },
+    {
+      question: "Qual é o animal apresentado na imagem?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Ornitorrinco",
+      original: 'ORNITORRINCO',
+      foto: 'https://telegra.ph/file/8ffdd62da1834433112be.jpg'
+    },
+    {
+      question: "Qual é o animal apresentado na imagem?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Husky Siberiano",
+      original: 'HUSKY SIBERIANO',
+      foto: 'https://telegra.ph/file/07b98023259637951ba8f.jpg'
+    },
+    {
+      question: "Qual é o animal apresentado na imagem?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Capivara",
+      original: 'CAPIVARA',
+      foto: 'https://telegra.ph/file/54f20cbd80737fe45a284.jpg'
+    },
+    {
+      question: "Aqui vai um enigma: “Eu sou o rei da selva, mas sou também um predador, tenho garras afiadas e dentes fortes. O que sou?”\n• Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Leão",
+      original: "LEÃO",
+      foto: "https://telegra.ph/file/84ae747d96d97c030d36d.jpg"
+    },
+    {
+      question: "Que animal é o único que pode ver a cor ultravioleta?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Abelha, têm três olhos, sendo dois grandes na frente e um pequeno no topo da cabeça. O olho pequeno é chamado de ocelos e é sensível à luz ultravioleta.",
+      original: "ABELHA",
+      foto: "https://telegra.ph/file/84ae747d96d97c030d36d.jpg"
+    },
+    {
+      question: "Que animal é o maior do mundo?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Baleia azul, ela pode atingir até 30 metros de comprimento e pesar até 200 toneladas.",
+      original: "BALEIA AZUL",
+      foto: "https://telegra.ph/file/84ae747d96d97c030d36d.jpg"
+    },
+    {
+      question: "Que animal é o mais inteligente do mundo?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Gorila, eles são capazes de usar ferramentas, resolver problemas e até mesmo expressar emoções complexas.",
+      original: "GORILA",
+      foto: "https://telegra.ph/file/84ae747d96d97c030d36d.jpg"
+    },
+    {
+      question: "Que animal é capaz de aprender mais de 100 palavras e frases?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Golfinho, eles são capazes de aprender e usar uma linguagem complexa, que inclui sons, gestos e até mesmo sinais.",
+      original: "GOLFINHO",
+      foto: "https://telegra.ph/file/84ae747d96d97c030d36d.jpg"
+    },
+    {
+      question: "Que animal é capaz de criar ferramentas complexas, como lanças e redes?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Orangotango, são os primatas mais inteligentes do mundo. Eles são capazes de usar ferramentas de forma sofisticada, como para caçar, pescar e coletar alimentos.",
+      original: "ORANGOTANGO",
+      foto: "https://telegra.ph/file/84ae747d96d97c030d36d.jpg"
+    },
+    {
+      question: "Que animal é capaz de aprender a linguagem de sinais e se comunicar com humanos?\n • Envie sua resposta abaixo, mencionando a mensagem.",
+      resposta: "Chimpanzé, eles são os primatas mais próximos dos humanos. Eles são capazes de aprender a linguagem de sinais e se comunicar com humanos de forma complexa.",
+      original: "CHIMPANZÉ",
+      foto: "https://telegra.ph/file/84ae747d96d97c030d36d.jpg"
+    },
 ]
 
 exports.enigmaArchive = [
-{
-numero: "ENIGMA 1",
-respostaEne: "O FÓSFORO",
-charada: "Imagine que você está em uma sala escura ao lado de Sherlock. Nela há um fósforo, uma lâmpada de querosene, uma vela e uma lareira. O que você acenderia primeiro?"
+    {
+        numero: "ENIGMA 1",
+        respostaEne: "O FÓSFORO",
+        charada: "Imagine que você está em uma sala escura ao lado de Sherlock. Nela há um fósforo, uma lâmpada de querosene, uma vela e uma lareira. O que você acenderia primeiro?"
+    },
+    {
+        numero: "ENIGMA 2",
+        respostaEne: "SEGREDO",
+        charada: "O detetive Sherlock encontrou um bilhete que faz parte de uma pista de um mistério que precisa ser solucionado. “Se você me tem, quer me compartilhar; se você não me compartilha, você me manteve. O que eu sou?”"
+    },
+    {
+        numero: "ENIGMA 3",
+        respostaEne: "NENHUM",
+        charada: "Watson e Sherlock adoram brincar com enigmas para treinar o método científico. Ajude-os a encontrar a resposta desse enigma: um macaco, um esquilo e um pássaro estão correndo para o topo de um coqueiro. Quem pegará a banana primeiro, o macaco, o esquilo ou o pássaro?"
+    },
+    {
+        numero: "ENIGMA 4",
+        respostaEne: "ECO",
+        charada: "Eu falo, mas não tenho boca. Eu ouço, mas não tenho ouvidos. Não tenho corpo, mas vivo com o vento. Quem sou eu?"
+    },
+    {
+        numero: "ENIGMA 5",
+        respostaEne: "IDADE",
+        charada: "Eu sou algo que as pessoas amam ou odeiam. Eu mudo tanto a aparência das pessoas quanto seus pensamentos. Se uma pessoa cuida de si mesma, eu subo ainda mais. Eu engano algumas pessoas. E para outras, sou um verdadeiro mistério. Algumas pessoas bem que tentam me esconder, mas uma hora, inevitavelmente, eu apareço. Não importa o que as pessoas tentem, eu jamais cairei. Quem sou eu?"
+    },
+    {
+        numero: "ENIGMA 6",
+        respostaEne: "SOMBRA",
+        charada: "Tenho apenas uma cor, mas posso ter vários tamanhos. Estou presente quando faz sol. Na chuva, jamais! Passo todo o tempo no chão, mas nunca fico sujo. Não faço mal algum e não posso sentir dor. Quem sou eu?"
+    },
+    {
+        numero: "ENIGMA 7",
+        respostaEne: "12 ANOS",
+        charada: "Perguntaram para Maria quantos anos ela tem. Maria respondeu que em dois anos terá o dobro da idade que ela tinha há cinco anos. Quantos anos Maria tem?"
+    },
+    {
+        numero: "ENIGMA 8",
+        respostaEne: "ESCURIDÃO",
+        charada: "Quanto mais houver de mim, menos você verá. Quem sou eu?"
+    },
+    {
+        numero: "ENIGMA 9",
+        respostaEne: "ESPONJA",
+        charada: "Sou cheio de buracos, mas ainda assim consigo reter muita água. Quem sou eu?"
+    },
+    {
+        numero: "ENIGMA 9",
+        respostaEne: "COTOVELO DIREITO",
+        charada: "O que você pode segurar com a sua mão esquerda, mas jamais com a direita?"
+    },
+    {
+        numero: "ENIGMA 10",
+        respostaEne: "ÂNCORA",
+        charada: "Quando precisa de mim, você me atira para longe, até um lugar onde ninguém pode me ver. Mas quando já não precisa mais, você me traz de volta. Quem sou eu?"
 },
-{
-numero: "ENIGMA 2",
-respostaEne: "SEGREDO",
-charada: "O detetive Sherlock encontrou um bilhete que faz parte de uma pista de um mistério que precisa ser solucionado. “Se você me tem, quer me compartilhar; se você não me compartilha, você me manteve. O que eu sou?”"
+    {
+       numero: "ENIGMA 11",
+       respostaEne: "AS PALAVRAS",
+       charada: "Nós podemos machucar sem fazer um único movimento. Podemos envenenar sem tocar. Carregamos a verdade e a mentira. E não devemos ser julgadas pelo nosso tamanho Quem somos nós?"
 },
-{
-numero: "ENIGMA 3",
-respostaEne: "NENHUM",
-charada: "Watson e Sherlock adoram brincar com enigmas para treinar o método científico. Ajude-os a encontrar a resposta desse enigma: um macaco, um esquilo e um pássaro estão correndo para o topo de um coqueiro. Quem pegará a banana primeiro, o macaco, o esquilo ou o pássaro?"
-},
-{
-numero: "ENIGMA 4",
-respostaEne: "ECO",
-charada: "Eu falo, mas não tenho boca. Eu ouço, mas não tenho ouvidos. Não tenho corpo, mas vivo com o vento. Quem sou eu?"
-},
-{
-numero: "ENIGMA 5",
-respostaEne: "IDADE",
-charada: "Eu sou algo que as pessoas amam ou odeiam. Eu mudo tanto a aparência das pessoas quanto seus pensamentos. Se uma pessoa cuida de si mesma, eu subo ainda mais. Eu engano algumas pessoas. E para outras, sou um verdadeiro mistério. Algumas pessoas bem que tentam me esconder, mas uma hora, inevitavelmente, eu apareço. Não importa o que as pessoas tentem, eu jamais cairei. Quem sou eu?"
-},
-{
-numero: "ENIGMA 6",
-respostaEne: "SOMBRA",
-charada: "Tenho apenas uma cor, mas posso ter vários tamanhos. Estou presente quando faz sol. Na chuva, jamais! Passo todo o tempo no chão, mas nunca fico sujo. Não faço mal algum e não posso sentir dor. Quem sou eu?"
-},
-{
-numero: "ENIGMA 7",
-respostaEne: "12 ANOS",
-charada: "Perguntaram para Maria quantos anos ela tem. Maria respondeu que em dois anos terá o dobro da idade que ela tinha há cinco anos. Quantos anos Maria tem?"
-},
-{
-numero: "ENIGMA 8",
-respostaEne: "ESCURIDÃO",
-charada: "Quanto mais houver de mim, menos você verá. Quem sou eu?"
-},
-{
-numero: "ENIGMA 9",
-respostaEne: "ESPONJA",
-charada: "Sou cheio de buracos, mas ainda assim consigo reter muita água. Quem sou eu?"
-},
-{
-numero: "ENIGMA 9",
-respostaEne: "COTOVELO DIREITO",
-charada: "O que você pode segurar com a sua mão esquerda, mas jamais com a direita?"
-},
-{
-numero: "ENIGMA 10",
-respostaEne: "ÂNCORA",
-charada: "Quando precisa de mim, você me atira para longe, até um lugar onde ninguém pode me ver. Mas quando já não precisa mais, você me traz de volta. Quem sou eu?"
-},
-{
-numero: "ENIGMA 11",
-respostaEne: "AS PALAVRAS",
-charada: "Nós podemos machucar sem fazer um único movimento. Podemos envenenar sem tocar. Carregamos a verdade e a mentira. E não devemos ser julgadas pelo nosso tamanho Quem somos nós?"
-},
-{
-numero: "ENIGMA 12",
-respostaEne: "UMA TESOURA",
-charada: "Ponha os dedos nos meus olhos que eu abrirei as minhas potentes mandíbulas. E vou devorar tudo o que vier pela frente: roupas, penas, papéis. Quem sou eu?"
-},
-{
-numero: "ENIGMA 13",
-respostaEne: "ALFABETO",
-charada: "Eu posso guardar tudo dentro de mim. Tudo o que você pode imaginar: o vento, as florestas, o mundo, o universo e até Deus. Tudo o que vier à sua cabeça você pode encontrar dentro de mim. Quem sou eu?"
-},
-{
-numero: "ENIGMA 14",
-respostaEne: "DINHEIRO FALSO",
-charada: "Quem me faz não diz que faz. Quem me tem não sabe que tem. E quem sabe não me quer ter de jeito nenhum. Quem sou eu?"
-},
-{
-numero: "ENIGMA 15",
-respostaEne: "ESCURIDÃO",
-charada: "Quanto mais houver de mim, menos você verá. Quem sou eu?"
-},
-{
-numero: "ENIGMA 16",
-respostaEne: "A CONFIANÇA",
-charada: "O que pode ser quebrada, mas nunca segurada?"
-},
-{
-numero: "ENIGMA 17",
-respostaEne: "OPÇÃO",
-charada: "Se há três, você tem três. Se há duas, você tem duas. Mas se há uma, você não tem nenhuma. O que é?"
-},
-{
-numero: "ENIGMA 18",
-respostaEne: "O PADRE",
-charada: "Já casei muitas vezes, mas estou sempre solteiro. Quem sou eu?"
-},
-{
-numero: "ENIGMA 19",
-respostaEne: "JOÃO",
-charada: "A mãe do João teve cinco filhos. O primeiro se chamava Dadá, o segundo Dedé, o terceiro, Didi, e o quarto, Dodó. Como se chamava o quinto filho?"
-},
-{
-numero: "ENIGMA 20",
-respostaEne: "O CAIXÃO",
-charada: "O que é, o que é: quem faz não quer, quem compra não usa e quem usa não fica sabendo?"
-}
+    {
+        numero: "ENIGMA 12",
+        respostaEne: "UMA TESOURA",
+        charada: "Ponha os dedos nos meus olhos que eu abrirei as minhas potentes mandíbulas. E vou devorar tudo o que vier pela frente: roupas, penas, papéis. Quem sou eu?"
+    },
+    {
+        numero: "ENIGMA 13",
+        respostaEne: "ALFABETO",
+        charada: "Eu posso guardar tudo dentro de mim. Tudo o que você pode imaginar: o vento, as florestas, o mundo, o universo e até Deus. Tudo o que vier à sua cabeça você pode encontrar dentro de mim. Quem sou eu?"
+    },
+    {
+        numero: "ENIGMA 14",
+        respostaEne: "DINHEIRO FALSO",
+        charada: "Quem me faz não diz que faz. Quem me tem não sabe que tem. E quem sabe não me quer ter de jeito nenhum. Quem sou eu?"
+    },
+    {
+        numero: "ENIGMA 15",
+        respostaEne: "ESCURIDÃO",
+        charada: "Quanto mais houver de mim, menos você verá. Quem sou eu?"
+    },
+    {
+        numero: "ENIGMA 16",
+        respostaEne: "A CONFIANÇA",
+        charada: "O que pode ser quebrada, mas nunca segurada?"
+    },
+    {
+        numero: "ENIGMA 17",
+        respostaEne: "OPÇÃO",
+        charada: "Se há três, você tem três. Se há duas, você tem duas. Mas se há uma, você não tem nenhuma. O que é?"
+    },
+    {
+        numero: "ENIGMA 18",
+        respostaEne: "O PADRE",
+        charada: "Já casei muitas vezes, mas estou sempre solteiro. Quem sou eu?"
+    },
+    {
+        numero: "ENIGMA 19",
+        respostaEne: "JOÃO",
+        charada: "A mãe do João teve cinco filhos. O primeiro se chamava Dadá, o segundo Dedé, o terceiro, Didi, e o quarto, Dodó. Como se chamava o quinto filho?"
+    },
+    {
+        numero: "ENIGMA 20",
+        respostaEne: "O CAIXÃO",
+        charada: "O que é, o que é: quem faz não quer, quem compra não usa e quem usa não fica sabendo?"
+    },
+    {
+        numero: "ENIGMA 21",
+        respostaEne: "A COMIDA",
+        charada: "Eu sou o que você come, Mas não o que você bebe. O que sou?"
+    },    
+    {
+        numero: "ENIGMA 22",
+        respostaEne: "UMA CANETA",
+        charada: "Eu sou o que você usa para escrever, Mas não o que você usa para ler. O que sou?"
+    },
+    {
+        numero: "ENIGMA 23",
+        respostaEne: "LETRA O",
+        charada: "Eu sou o começo de tudo, O fim de tudo, O que está no meio, E o que está em tudo. O que sou?"
+    },
+    {
+        numero: "ENIGMA 24",
+        respostaEne: "SER HUMANO",
+        charada: "O que é que tem quatro pernas de manhã, duas pernas de tarde e três pernas de noite?"
+    },    
+    {
+        numero: "ENIGMA 25",
+        respostaEne: "O OVO",
+        charada: "O que é que é redondo e branco, mas não é uma bola?"
+    },    
+    {
+        numero: "ENIGMA 26",
+        respostaEne: "A MAÇA",
+        charada: "O que é que é verde por fora e vermelho por dentro?"
+    },
+    {
+        numero: "ENIGMA 27",
+        respostaEne: "O FUTURO",
+        charada: "O que é que nunca está na frente, mas está sempre por trás?"
+    },   
+    {
+        numero: "ENIGMA 28",
+        respostaEne: "O VÁZIO",
+        charada: "O que é que é maior do que o Universo, mas é mais leve do que uma pena?"
+    },    
+    {
+        numero: "ENIGMA 28",
+        respostaEne: "O VÁZIO",
+        charada: "O que é que é maior do que o Universo, mas é mais leve do que uma pena?"
+    },
+    {
+        numero: "ENIGMA 29",
+        respostaEne: "UMA PROMESSA",
+        charada: "O que é que se pode quebrar, mas nunca se pode consertar?"
+    },    
+    {
+        numero: "ENIGMA 29",
+        respostaEne: "O PRESENTE",
+        charada: "O que é que é sempre jovem, mas nunca envelhece?"
+    } 
 ]
 
 exports.garticArchives = [
-{
-pergunta: 'Aplicativo',
-imagem: 'https://telegra.ph/file/dfa10e1cd64bfd575b26a.jpg',
-letra_inicial: 'N',
-contem_traços: '❌️️',
-resposta: 'NETFLIX'
-},
-{
-pergunta: 'Aplicativo',
-imagem: 'https://telegra.ph/file/070fbfa1cccd65681f3fa.jpg',
-letra_inicial: 'F',
-contem_traços: '❌️️',
-resposta: 'FACEBOOK'
-},
-{
-pergunta: 'Desenho',
-imagem: 'https://telegra.ph/file/1e344b9cde13d5a6c6095.jpg',
-letra_inicial: 'TO',
-contem_traços: '❌️️',
-resposta: 'TOM E JERRY'
-},
-{
-pergunta: 'Objeto',
-imagem: 'https://telegra.ph/file/af0e70ea5a92cbfc71f43.jpg',
-letra_inicial: 'GU',
-contem_traços: '✅️️️',
-resposta: 'GUARDA-CHUVA'
-},
-{
-pergunta: 'Profissão',
-imagem: 'https://telegra.ph/file/cbea80472e3d2624676a6.jpg',
-letra_inicial: 'J',
-contem_traços: '❌️️️️',
-resposta: 'JUIZ'
-},
-{
-pergunta: 'Aplicativo',
-imagem: 'https://telegra.ph/file/b5a9a0de5e222b5084a8a.jpg',
-letra_inicial: 'SN',
-contem_traços: '❌️️',
-resposta: 'SNAPCHAT'
-},
-{
-pergunta: 'Países',
-imagem: 'https://telegra.ph/file/5721a0cde0166bee675e5.jpg',
-letra_inicial: 'E',
-contem_traços: '❌️️',
-resposta: 'ESPANHA'
-},
-{
-pergunta: 'Objeto',
-imagem: 'https://telegra.ph/file/bdb05184d2d6f5a7d1ecf.jpg',
-letra_inicial: 'D',
-contem_traços: '❌️️',
-resposta: 'DARDOS'
-},
-{
-pergunta: 'Objeto',
-imagem: 'https://telegra.ph/file/317913121ec9ca6aae71b.jpg',
-letra_inicial: 'D',
-contem_traços: '❌️️',
-resposta: 'DOMINÓ'
-},
-{
-pergunta: 'Objeto',
-imagem: 'https://telegra.ph/file/63eca8c97ed165bfecfe5.jpg',
-letra_inicial: 'C',
-contem_traços: '❌️️',
-resposta: 'CANADÁ'
-},
-{
-pergunta: 'Jogos',
-imagem: 'https://telegra.ph/file/68ea5f4b182ae4c501a32.jpg',
-letra_inicial: 'X',
-contem_traços: '❌️️',
-resposta: 'XADREZ'
-},
-{
-pergunta: 'Filme',
-imagem: 'https://telegra.ph/file/a29ac8b0638d9e23bdab0.jpg',
-letra_inicial: 'A',
-contem_traços: '❌️️',
-resposta: 'A ORIGEM'
-},
-{
-pergunta: 'Filme',
-imagem: 'https://telegra.ph/file/b3e2aaca939ed0cdf7a73.jpg',
-letra_inicial: 'OS',
-contem_traços: '❌️️',
-resposta: 'OS SETE SAMURAIS'
-},
-{
-pergunta: 'Filme',
-imagem: 'https://telegra.ph/file/ab11fa68eda5abe19562b.jpg',
-letra_inicial: 'SE',
-contem_traços: '❌️️',
-resposta: 'SENHOR DOS ANÉIS'
-},
-{
-pergunta: 'Filme',
-imagem: 'https://telegra.ph/file/de030e592fecdc2cf0d20.jpg',
-letra_inicial: 'JU',
-contem_traços: '❌️️',
-resposta: 'JUMANJI'
-},
-{
-pergunta: 'Filme',
-imagem: 'https://telegra.ph/file/aafcb73c2dd10aef1bd47.jpg',
-letra_inicial: 'S',
-contem_traços: '❌️️',
-resposta: 'SONIC'
-},
-{
-pergunta: 'Série',
-imagem: 'https://telegra.ph/file/e0c905d9630bf9d36df77.jpg',
-letra_inicial: 'TH',
-contem_traços: '❌️️',
-resposta: 'THE WALKING DEAD'
-},
-{
-pergunta: 'Desenho',
-imagem: 'https://telegra.ph/file/d30cac0c8bb2159d38192.jpg',
-letra_inicial: 'SI',
-contem_traços: '❌️️',
-resposta: 'SIMPSONS'
-},
-{
-pergunta: 'Série',
-imagem: 'https://telegra.ph/file/c2a993a353fcca61242e4.jpg',
-letra_inicial: 'ST',
-contem_traços: '❌️️',
-resposta: 'STRANGER THINGS'
-},
-{
-pergunta: 'Série',
-imagem: 'https://telegra.ph/file/fac611a1d9e2c2fc14957.jpg',
-letra_inicial: 'PE',
-contem_traços: '❌️️',
-resposta: 'PEAKY BLINDERS'
-},
-{
-pergunta: 'Série - Documentário',
-imagem: 'https://telegra.ph/file/ecd17a4b75e4541bd20b8.jpg',
-letra_inicial: 'CH',
-contem_traços: '❌️️',
-resposta: 'CHERNOBYL'
-},
-{
-pergunta: 'Países',
-imagem: 'https://telegra.ph/file/05164ea8e02880f74010b.jpg',
-letra_inicial: 'C',
-contem_traços: '❌️️',
-resposta: 'CHINA'
-},
-{
-pergunta: 'Países',
-imagem: 'https://telegra.ph/file/24161e5698f3874c285eb.jpg',
-letra_inicial: 'S',
-contem_traços: '❌️️',
-resposta: 'SUÍÇA'
-},
-{
-pergunta: 'Países',
-imagem: 'https://telegra.ph/file/0207859d0fcb2c7624f1b.jpg',
-letra_inicial: 'S',
-contem_traços: '❌️️',
-resposta: 'COREIA DO SUL'
-},
-{
-pergunta: 'Países',
-imagem: 'https://telegra.ph/file/4890a8e71a7cc8d3862d0.jpg',
-letra_inicial: 'AR',
-contem_traços: '❌️️',
-resposta: 'ARGENTINA'
-},
-{
-pergunta: 'Países',
-imagem: 'https://telegra.ph/file/dfb6e013f52a018032625.jpg',
-letra_inicial: 'P',
-contem_traços: '❌️️',
-resposta: 'PORTUGAL'
-},
-{
-pergunta: 'Países',
-imagem: 'https://telegra.ph/file/8d238d4ffa865dd7009a7.jpg',
-letra_inicial: 'F',
-contem_traços: '❌️️',
-resposta: 'FRANÇA'
-}
+    {
+      pergunta: 'Aplicativo',
+      imagem: 'https://telegra.ph/file/dfa10e1cd64bfd575b26a.jpg',
+      letra_inicial: 'N',
+      contem_traços: '❌️️',
+      resposta: 'NETFLIX'
+    },
+    {
+      pergunta: 'Aplicativo',
+      imagem: 'https://telegra.ph/file/070fbfa1cccd65681f3fa.jpg',
+      letra_inicial: 'F',
+      contem_traços: '❌️️',
+      resposta: 'FACEBOOK'
+      },
+      {
+      pergunta: 'Desenho',
+      imagem: 'https://telegra.ph/file/1e344b9cde13d5a6c6095.jpg',
+      letra_inicial: 'TO',
+      contem_traços: '❌️️',
+      resposta: 'TOM E JERRY'
+    },
+    {
+      pergunta: 'Objeto',
+      imagem: 'https://telegra.ph/file/af0e70ea5a92cbfc71f43.jpg',
+      letra_inicial: 'GU',
+      contem_traços: '✅️️️',
+      resposta: 'GUARDA-CHUVA'
+    },
+    {
+      pergunta: 'Profissão',
+      imagem: 'https://telegra.ph/file/cbea80472e3d2624676a6.jpg',
+      letra_inicial: 'J',
+      contem_traços: '❌️️️️',
+      resposta: 'JUIZ'
+    },
+    {
+      pergunta: 'Aplicativo',
+      imagem: 'https://telegra.ph/file/b5a9a0de5e222b5084a8a.jpg',
+      letra_inicial: 'SN',
+      contem_traços: '❌️️',
+      resposta: 'SNAPCHAT'
+    },
+    {
+      pergunta: 'Países',
+      imagem: 'https://telegra.ph/file/5721a0cde0166bee675e5.jpg',
+      letra_inicial: 'E',
+      contem_traços: '❌️️',
+      resposta: 'ESPANHA'
+    },
+    {
+      pergunta: 'Objeto',
+      imagem: 'https://telegra.ph/file/bdb05184d2d6f5a7d1ecf.jpg',
+      letra_inicial: 'D',
+      contem_traços: '❌️️',
+      resposta: 'DARDOS'
+    },
+    {
+      pergunta: 'Objeto',
+      imagem: 'https://telegra.ph/file/317913121ec9ca6aae71b.jpg',
+      letra_inicial: 'D',
+      contem_traços: '❌️️',
+      resposta: 'DOMINÓ'
+    },
+    {
+      pergunta: 'Objeto',
+      imagem: 'https://telegra.ph/file/63eca8c97ed165bfecfe5.jpg',
+      letra_inicial: 'C',
+      contem_traços: '❌️️',
+      resposta: 'CANADÁ'
+    },
+    {
+      pergunta: 'Jogos',
+      imagem: 'https://telegra.ph/file/68ea5f4b182ae4c501a32.jpg',
+      letra_inicial: 'X',
+      contem_traços: '❌️️',
+      resposta: 'XADREZ'
+    },
+    {
+      pergunta: 'Filme',
+      imagem: 'https://telegra.ph/file/a29ac8b0638d9e23bdab0.jpg',
+      letra_inicial: 'A',
+      contem_traços: '❌️️',
+      resposta: 'A ORIGEM'
+    },
+    {
+      pergunta: 'Filme',
+      imagem: 'https://telegra.ph/file/b3e2aaca939ed0cdf7a73.jpg',
+      letra_inicial: 'OS',
+      contem_traços: '❌️️',
+      resposta: 'OS SETE SAMURAIS'
+    },
+    {
+      pergunta: 'Filme',
+      imagem: 'https://telegra.ph/file/ab11fa68eda5abe19562b.jpg',
+      letra_inicial: 'SE',
+      contem_traços: '❌️️',
+      resposta: 'SENHOR DOS ANÉIS'
+    },
+    {
+      pergunta: 'Filme',
+      imagem: 'https://telegra.ph/file/de030e592fecdc2cf0d20.jpg',
+      letra_inicial: 'JU',
+      contem_traços: '❌️️',
+      resposta: 'JUMANJI'
+    },
+    {
+      pergunta: 'Filme',
+      imagem: 'https://telegra.ph/file/aafcb73c2dd10aef1bd47.jpg',
+      letra_inicial: 'S',
+      contem_traços: '❌️️',
+      resposta: 'SONIC'
+    },
+    {
+      pergunta: 'Série',
+      imagem: 'https://telegra.ph/file/e0c905d9630bf9d36df77.jpg',
+      letra_inicial: 'TH',
+      contem_traços: '❌️️',
+      resposta: 'THE WALKING DEAD'
+    },
+    {
+      pergunta: 'Desenho',
+      imagem: 'https://telegra.ph/file/d30cac0c8bb2159d38192.jpg',
+      letra_inicial: 'SI',
+      contem_traços: '❌️️',
+      resposta: 'SIMPSONS'
+    },
+    {
+      pergunta: 'Série',
+      imagem: 'https://telegra.ph/file/c2a993a353fcca61242e4.jpg',
+      letra_inicial: 'ST',
+      contem_traços: '❌️️',
+      resposta: 'STRANGER THINGS'
+    },
+    {
+      pergunta: 'Série',
+      imagem: 'https://telegra.ph/file/fac611a1d9e2c2fc14957.jpg',
+      letra_inicial: 'PE',
+      contem_traços: '❌️️',
+      resposta: 'PEAKY BLINDERS'
+    },
+    {
+      pergunta: 'Série - Documentário',
+      imagem: 'https://telegra.ph/file/ecd17a4b75e4541bd20b8.jpg',
+      letra_inicial: 'CH',
+      contem_traços: '❌️️',
+      resposta: 'CHERNOBYL'
+    },
+    {
+      pergunta: 'Países',
+      imagem: 'https://telegra.ph/file/05164ea8e02880f74010b.jpg',
+      letra_inicial: 'C',
+      contem_traços: '❌️️',
+      resposta: 'CHINA'
+    },
+    {
+      pergunta: 'Países',
+      imagem: 'https://telegra.ph/file/24161e5698f3874c285eb.jpg',
+      letra_inicial: 'S',
+      contem_traços: '❌️️',
+      resposta: 'SUÍÇA'
+    },
+    {
+      pergunta: 'Países',
+      imagem: 'https://telegra.ph/file/0207859d0fcb2c7624f1b.jpg',
+      letra_inicial: 'S',
+      contem_traços: '❌️️',
+      resposta: 'COREIA DO SUL'
+    },
+    {
+      pergunta: 'Países',
+      imagem: 'https://telegra.ph/file/4890a8e71a7cc8d3862d0.jpg',
+      letra_inicial: 'AR',
+      contem_traços: '❌️️',
+      resposta: 'ARGENTINA'
+    },
+    {
+      pergunta: 'Países',
+      imagem: 'https://telegra.ph/file/dfb6e013f52a018032625.jpg',
+      letra_inicial: 'P',
+      contem_traços: '❌️️',
+      resposta: 'PORTUGAL'
+    },
+    {
+      pergunta: 'Países',
+      imagem: 'https://telegra.ph/file/8d238d4ffa865dd7009a7.jpg',
+      letra_inicial: 'F',
+      contem_traços: '❌️️',
+      resposta: 'FRANÇA'
+    }
 ]
 
 exports.whatMusicAr = [

@@ -1,3 +1,191 @@
+exports.ErrorBaileys_401 = () => {
+response = ["Houve uma desconexão, re-escaneie o QR, se preciso... Estou reiniciando!", "Minha sessão desconectou, pode reconectar e escanear o QR novamente? Gerando qr-code!", "Você me desconectou? A sessão precisa ser escaneada novamente... Estou reiniciando!"]
+return response[Math.floor(Math.random() * response.length)]
+}
+
+exports.ErrorBaileys_408 = () => {
+response = ["A sessão sofreu um timeout, recarregando...", "O tempo de resposta esgotou, recarregando...", "Recarregando a sessão por conta de um timeout..."]
+return response[Math.floor(Math.random() * response.length)]
+}
+
+exports.ErrorBaileys_411 = () => {
+response = ["A sessão salva não bate com a conexão salva, reiniciando sua sessão...", "O arquivo de sessão parece incorreto, estou tentando recarregar...", "Falha ao conectar, pois a sessão parece incorreta, recarregando..."]
+return response[Math.floor(Math.random() * response.length)]
+}
+
+exports.ErrorBaileys_428 = () => {
+response = ["A conexão fechou, sua internet pode ter caído? Tentando reconectar...", "Não foi possível manter a conexão com o WhatsApp, tentando de novo...", "Sua conexão com o WhatsApp parece ter caído, reconectando..."]
+return response[Math.floor(Math.random() * response.length)]
+}
+
+exports.ErrorBaileys_440 = () => {
+response = ["Outra sessão do WhatsApp Web foi aberta no meu número, feche-a...", "Você possui outra sessão do WhatsApp no meu número? Fecha para usar...", "Existem muitas sessões do WhatsApp conectadas no meu número, feche-as..."]
+return response[Math.floor(Math.random() * response.length)]
+}
+
+exports.ErrorBaileys_500 = () => {
+response = ["A sessão parece mal configurada, estarei tentando reconectar...", "Uma reconexão será feita, pois a sessão foi considerada incorreta...", "A sessão parece incorreta, a conexão estará sendo reinicializada..."]
+return response[Math.floor(Math.random() * response.length)]
+}
+
+exports.ErrorBaileys_515 = () => {
+response = ["Estou reiniciando, pois a sessão pediu que fosse atualizada...", "O sistema pediu para reiniciar, estou fazendo isso automaticamente...", "Meu código será reinicializado para estabilizar a conexão..."]
+return response[Math.floor(Math.random() * response.length)]
+}
+
+exports.open = () => {
+response = ["Sessão aberta com o WhatsApp-Web com sucesso! Próximos logs abaixo:", "Conectado(a) com sucesso ao WhatsApp-Web! Próximos logs abaixo:", "Sessão carregada com sucesso senhor(a), próximos logs abaixo:", "Online, conexão estabilizada com sucesso senhor(a), próximo logs abaixo:"]
+return response[Math.floor(Math.random() * response.length)]
+}
+
+exports.connecting = () => {
+response = ["Inicializando ou reiniciando meu sistema, aguarde mestre...", "Só um segundinho, estou carregando as informações nescessárias.", "Inicialização do bot está em andamento! Carregando informações, aguarde...", "Já tomou um copo de água hoje? Se não vai lá! Iniciando bot...", "Oiiieee fofuxo, tudo baum? Já tô iniciando gostoso, calma aí..."]
+return response[Math.floor(Math.random() * response.length)]
+}
+
+exports.blackList = (GroupMetadata_, sab2) => { 
+participant = sab2.participants[0].split("@")[0]
+response = [`*@${participant}* foi removido do *${GroupMetadata_.subject}* por estar na lista negra...`, `Olha quem deu as caras por aqui! *@${participant}* achava que eu não ia te ver de novo bobinho(a)? 💅🏻`, `*@${participant}* achou que ia passar despercebido? Achou errado! Bye bye... 😵‍💫`, `😨 Oh my god! *@${participant}* acaba de ser banido do grupo, por estar na lista negra.`]
+return response[Math.floor(Math.random() * response.length)]
+}
+
+exports.phrasesLeft = (getName, sab2, encodeURIComponent) => {
+response = ["Devemos brindar pela partida dele(a)?", "Menos um nessa indústria vital...", "Nada pra ver aqui, ele saiu por 'acidente'...", `${encodeURIComponent(getName(sab2.participants[0]))} saiu do grupo...`]
+return response[Math.floor(Math.random() * response.length)]
+}
+
+exports.phrasesWelcome = (mdata_2, getName, sab2, encodeURIComponent) => {
+response = [`ao grupo ${encodeURIComponent(mdata_2.subject)}`, `O ${encodeURIComponent(getName(sab2.participants[0].split('@')[0]))} acaba de cair de paraquedas aqui no grupo...`, "Leia as regras e divirta-se!", "Mais um nessa indústria vital...", "Gostaria de um chá enquanto lê as regras?", "Saudações membro novo, aqui é a gerente do estabelecimento!"]
+return response[Math.floor(Math.random() * response.length)]
+}
+
+exports.wait = () => {
+response = [
+    'Verdade Tim Maia, pisquei para outro e o meu amor me abandonou... 😭💔 Errei, fui você haha! Enviando rapaz...',
+    'Verdade vulgo gonzagão, você só pensa em namorar escondidinho... Enviando! 😹',
+    'Luz na passarela! Você deve ser nova loira do Tchan... Aguarde potinho de mel!',
+    'Estou quase terminando. Por favor, aproveite este momento para se hidratar!',
+    'Já ganhou, tantan! Tenha calma meu prefeito que eu tô enviando...',
+    'Já tomou água hoje? Se não vai lá tomar rapaz, que eu tô enviando...',
+    'Vai com calma chocolate branco, que eu tô só começando! Enviando...',
+    'Eu não tenho um pingo de paz mesmo! 🙄 Calma aí calabreso, tô enviando...',
+    'Quando eu acho que eu tenho paz, vem você! Calma aí, tô enviando...',
+    '*Oh ratinha à milanesa!* 🙄🐀 Você não me dá um minuto de paz mesmo? Mas relaxa aí que eu tô enviando...',
+    '*RAN-DAN-DAN🏍️💨* Calma ae que eu tô chegando! Ops, enviando...',
+    'Eiii, acha que eu sou sua empregada para te atender a todo tempo? 🙄 *Calma aí, que eu tô terminando...*',
+    'Não sei o que faço, a minha vida é uma luta sem fim. 😭💔 Enviando...',
+    'Eu não sou o CAPS, mas te adotaria *(pegaria)*... Eitaa, me emocionei um pouquinho, tô enviando gstz! 💋',
+    'Nossa que humano bobinho, não sabe nem quanto é 2+2, *imagina se eu perguntasse se 4 é par? Enviando....*',
+    'Oh sua rata de esgoto! 🐀✨ Dei um apelido fofo pá voxê... Enviando!',
+    'Lá em casa tem uma galinha, será que tua amiga? Enviando...',
+    '😭 Nossa como você é insensível, você nunca diz *“eu te amo”* pra mim... Faço tudo que pede, você nem agradece ingrato! Mas perai que eu tô enviando....',
+    '*Uau como você é um gatx, você tá pra adoção?* 🥹👀 Eu adoria te pegar, ops adotar! Tô enviando, calma aí...',
+    'Ei, como é que chama um gatx? É assim *“pss pss”*? Pq eu tô te chamando e você não vem até mim... 🫣 Enviando!',
+    'Eu levo vida de empreguete, eu pego às 7:00 e não sei hora que vai acabar... *Finalizando o seu pedido senhor(a)!*',
+    '😵‍💫🌟 Majestade, já estou preparando para enviar! Aguarde senhor(a)...',
+    ' 💫👸🏼 - Oi princesa, já estou preparando pra enviar! Aguarde senhora...',
+    'Pisa no freio aí amigo, tô enfiando já, ops enviando rsrs!', 
+    'Foi daqui que pediram comando? Calma aí, que está chegando...', 
+    'Oq vc ñ pede chorando, que eu não faço sorrindo, enviando já!', 
+    'Em 365 dias úteis termino o comando kkkk meme, to enviando!', 
+    'Não precisa gritar comigo, já ouvi e tô enviando seu pedido! Aguarde...', 
+    'Aproveita que tô terminando aqui e beba água, hidrate-se senhor(a)!', 
+    'Manda quem pode, obedece quem tem juízo. Já tô enviando... ', 
+    'Jaja está na mão amigo(a), aguarde um instante!️', 
+    'Analisando essa cadeia hereditária, quero me livrar dessa situação precária. 💃🏻 *Tô terminando, aguarde senhor(a)!*',
+    '💃🏻💫 Vamos devagarinho até embaixo? Enquanto eu tô enviando o resultado...',
+    '“Segura o tchan, amarra...” Sabe que música é essa? *Eu sei!* Falando nisso, estou terminando a solicitação...',
+    '🫣💫 *Ei, você sabe dançar a dança do ventre?* Posso te ensinar, enquanto eu tô terminando o que você pediu...',
+    'Nossa, tô ocupada no momento, aliás como eu sou a bot que o Brasil ama! Abri uma exceção para você, enviando...',
+    'Vai com calma aí macaco, que eu tô enviando o que se pede. 🐵✨',
+    'Como ousa vim me pertubar em meu horário de descanso? 💤 Aguarde, estou enviando o que foi solicitado...'
+]
+return response[Math.floor(Math.random() * response.length)]
+}
+
+exports.onlyAdmins = () => {
+response = [
+    'Você não é um adminstrador do grupo, atualmente você é um mero integrante da baderna, então não tem a virtude de usar comandos administrativos! 🧙🏼‍♀️🌟',
+    'Como ousa usar um comando que não lhe pertence o dom de usar! *Somente adminstradores do grupo tem acesso...*',
+    '*Quem é você na fila do pão?* Ponha-se no seu lugar! Este comando é só para seres superiores(adms) do grupo...',
+    'Você não é um dos ademiros, será que você se tornará digno de usar isso?',
+    'Ih ala, um camponês querendo usar comandos da alta patente do grupo. Este comando é só para seres superiores, são os administradores do bar! 🍻🥴',
+    'Quem dera eu autorizar você à usar comandos administrativos sem fazer parte da organização do barzinho. ️🍻',
+    'Esse comando é restrito para somente administradores, dono de grupo, meu chefe ou moderadores, quem sabe um dia você entre em uma dessas listas.'
+]
+return response[Math.floor(Math.random() * response.length)]
+}
+
+exports.onlyOwner = () => {
+response = [
+    '💫👮🏻‍♀ Você não tem nenhum direito de usar este comando, somente meu proprietário tem o poder total de usar!',
+    'Olá intruso, esta é uma área restrita! Somente pessoas autorizadas tem o poder de usar – como eu e meus chefes, ninguém é permitido por aqui! 👮🏻‍♀💫',
+    'Você não faz parte da organização do bot, como quer usar uma funcionalidade além do seu poder senhor(a)? 🧐🍻'
+];
+return response[Math.floor(Math.random() * response.length)];
+}
+
+exports.onlyGroup = () => {
+response = [
+    'Foi mal amiguinho, mas somente um grupo tem direito de usar de usar este comando...',
+    'Como você quer usar um comando de grupo no privado? 🧐 Se este comando é liberado o uso somente em grupos...',
+   'Fui configurada para este comando ser somente executado em grupos! Por favor, não insista em usar novamente, foi avisado...',
+   'Olá, tudo bem? Esta função está reservada para grupos! Se quiser usar, basta me adicionar (com a permissão do meu querido proprietário), entrar em contato com ele para descobrir sobre grupos oficiais (se houver).️'   
+];
+return response[Math.floor(Math.random() * response.length)];
+}
+    
+exports.onlyPremiumUser = () => {
+response = [
+    'Quem é você? 😵‍💫💫 Você não é um usuário premium, para usar esse comando você deve ser um user vip da bot! Obtenha o premium, entrando em contato com o meu dono senhor(a).',
+    '🌟 *Você não tem poderes o bastante, para usar comandos da lista vip!* Então para usar este comandos, deve-se entrar em contato com o meu proprietário e negociar seu acesso premium...',
+     'Este comando é exclusivo para usuários na lista premium! Você ainda não tem poder suficiente de usar funções vip.'
+]
+return response[Math.floor(Math.random() * response.length)];
+}
+
+exports.onlyBotAdmin = () => {
+response = [
+    'Em que hora te falaram que eu posso executar comandos administrativas sem ser adminstradora do grupo? Coloque-me no posto de fiscal do grupo, pois algumas funções dependem do cargo de adm...',
+    '🍻👮🏼‍♀️ Eu não trabalho na segurança do bar ainda! Para me contratar, me coloque como adminstradora do grupo e estarei fazendo meu trabalho sem interrupções.',
+    'Vai com calma! Eu não sou adminstradora para executar certas funções no grupo...'
+];
+return response[Math.floor(Math.random() * response.length)];
+}
+
+exports.onlyGroupFun = (prefixo) => {
+response = [
+    `🤹🏻‍♀️ - Deseja usar os comandos de diversão em seu grupo? É nescessário a ativação do ${prefixo}modobrincadeira para ser liberado o uso de todos os comandos de interação e diversão dos participantes. (Obs: Somente seres superiores aos camponêses tem autorização de liberar).`, 
+    `O modo brincadeira não está atualmente ativo no grupo, solicite a um adminstrador do grupo para realizar a ativação... 🫤 Para liberar, solicite que execute o comando: *${prefixo}modobrincadeiras 1*.`
+  ];
+return response[Math.floor(Math.random() * response.length)];
+}
+
+exports.onlyPrivate = () => {
+response = [
+    '🔐 Hello, o comando só está disponível para o uso em conversas privadas...',
+    '😵‍💫🌟 Hello, o comando é somente liberado em conversas privadas! Mas tome cuidado ao me chamar no privado, meu dono(a) deve ter ativado o anti-pv.'
+]
+return response[Math.floor(Math.random() * response.length)];
+}
+
+exports.bannedUser = () => {
+response = [
+    'Você infligiu uma cláusulas do meus termos e condições de uso, por isso, você está banido de usar meus comandos por tempo indeterminado...️',
+    'Você está impossibilitado de usar meus comandos, ou seja, está bloqueado por tempo indeterminado até meus superiores mudar de ideia... 😭👋🏼',
+    '*Meu deus!* 😱 Você deve ter deixado meu dono com muita raiva, para ele te banir mesmo de usar meus comandos...'
+]
+return response[Math.floor(Math.random() * response.length)];
+}
+
+exports.errorConvertSticker = () => {
+return 'Falha ao converter a mídia encaminhada, tente novamente mais tarde...';
+}
+
+exports.errorCommandLink = () => {
+return 'Certifique-se ️se esse é o link correto a ser utilizado no comando.';
+}
+
 exports.playResult = (data) => {
   return `• *Título:* ${data.resultado[0].title}\n• *Descrição:* ${data.resultado[0].description}\n• *Duração:* ${data.resultado[0].timestamp} | ${data.resultado[0].seconds} segundos.\n• *Link:* ${data.resultado[0].url}`
 }
@@ -14,35 +202,26 @@ exports.playDocumentResult = (data) => {
   return `• *Título:* ${data.resultado[0].title}\n• *Descrição:* ${data.resultado[0].description}\n• *Duração:* ${data.resultado[0].timestamp} | ${data.resultado[0].seconds} segundos.\n• *Link:* ${data.resultado[0].url}`
 }
 
-exports.shazamResult = (data) => {
-  return `• *Música:* ${data.resultado[0].title}\n• *Duração:* ${data.resultado[0].timestamp} | ${data.resultado[0].seconds} segundos.\n• *Link:* ${data.resultado[0].url}`
+exports.shz = (data) => {
+  return `• Música: *${data.resultado[0].title}*\n• *Descrição:* ${data.resultado[0].description}\n• Duração: *${data.resultado[0].timestamp} - ${data.resultado[0].seconds}*\n• Link: *${data.resultado[0].url}*`
 }
 
-exports.playMixResult = (data) => {
-return `*Irei enviar 5 resultados, são eles:*\n–\n*1°* ${data.resultado[0].title}\n• *Duração:* ${data.resultado[0].timestamp} | ${data.resultado[0].seconds} segundos.\n–\n*2°* ${data.resultado[1].title}\n• *Duração:* ${data.resultado[1].timestamp} | ${data.resultado[1].seconds} segundos.\n–\n*3°* ${data.resultado[2].title}\n• *Duração:* ${data.resultado[2].timestamp} | ${data.resultado[2].seconds} segundos.\n–\n*4°* ${data.resultado[3].title}\n• *Duração:* ${data.resultado[3].timestamp} | ${data.resultado[3].seconds} segundos.\n–\n*5°* ${data.resultado[4].title}\n• *Duração:* ${data.resultado[4].timestamp} | ${data.resultado[4].seconds} segundos.`
-}
+
 
 exports.spotifyResult = (data, dataUrl, getPreview) => {
-return `• ID: *${data.resultado.tracksArray[0].id}*\n–\n• Nome da Música: *${data.resultado.tracksArray[0].title}*\n• Duração: *${dataUrl.resultado.duration}*\n• Nome do(s) Artista(s): *${data.resultado.tracksArray[0].artists.map(v => `${v.name}`).join(', ')}*\n• Url: *${data.resultado.tracksArray[0].url}*\n• Preview 30s: *${getPreview.data}*`
+return `• ID: *${data.resultado.tracksArray[0].id}*\n–\n• Música: *${data.resultado.tracksArray[0].title}*\n• Duração: *${dataUrl.resultado.duration}*\n• Artista(s): *${data.resultado.tracksArray[0].artists.map(v => `${v.name}`).join(', ')}*\n• Url: *${data.resultado.tracksArray[0].url}*\n• Preview 30s: *${getPreview.data}*`
 }
 
 exports.syntaxDownloadMusic = () => {
 return `Por favor, insira o título de uma música ou vídeo.`
 }
 
-exports.syntaxPlayMix = () => {
-return `Por favor, coloque um nome de um artista para obter sucesso ao resultado.`
+exports.InstaStalker = (data, formatNumber, formatNumberDecimal) => {
+return `• Usuário: *${data.resultado.username}*\n• Nome: *${data.resultado.fullname || "Usuário do Instagram"}*\n• Publicações: *${data.resultado.posts}*\n• Seguidores: *${formatNumber(data.resultado.followers)}* (${formatNumberDecimal(data.resultado.followers)})\n• Seguindo: *${formatNumber(data.resultado.following)}* (${formatNumberDecimal(data.resultado.following)})\n–\n• Biografia: ${data.resultado.biography || "O(a) proprietário(a) do perfil não tem nenhuma biografia no perfil."}`
 }
 
-exports.igstalk = (data) => {
-// Variáveis:
-var isPrivateAccount = data.resultado.is_private === true ? "Sim." : data.resultado.is_private === false ? "Não." : undefined
-var isMusicProfile = data.resultado.is_music_on_profile === true ? "Sim." : data.resultado.is_music_on_profile === false ? "Não." : undefined
-var isAccountBusiness = data.resultado.is_business === true ? "Sim." : data.resultado.is_business === false ? "Não." : undefined
-var isVerifiedAccount = data.resultado.is_verified === true ? "Sim." : data.resultado.is_verified === false ? "Não." : undefined
-var isHighlight = data.resultado.is_highlight === true ? "Sim." : data.resultado.is_highlight === false ? "Não." : undefined
-// Texto de envio:
-return `• Usuário(@): *${data.resultado.username}*\n• Link do perfil: *http://instagram.com/${data.resultado.username}*\n• Nome completo do usuário: *${data.resultado.fullname}*\n–\n• Contém música neste perfil? *${isMusicProfile}*\n• Esta conta contém verificado? *${isVerifiedAccount}*\n• Esta conta é privada? *${isPrivateAccount}*\n• Conta empresarial ou pertence a uma empresa? *${isAccountBusiness}*\n• Esta conta contém algum destaque de stories? *${isHighlight}*\n–\n• Número de seguidores do(a) usuário(a): *${data.resultado.followers} seguidores.*\n• Número de pessoas sendo seguidas pelo(a) usuário(a): *${data.resultado.following} seguindo.*\n–\n• *Biografia:*\n${data.resultado.biography}`
+exports.InstaStalker2 = (data, formatNumber, formatNumberDecimal) => {
+return `• Usuário: *@${data.resultado.user_info.username}*\n• User ID: *${data.resultado.user_info.id}*\n• Nome: *${data.resultado.user_info.full_name || "Usuário do Instagram"}*\n• Conta verificada? *${data.resultado.user_info.is_verified === true ? "Sim." : data.resultado.user_info.is_verified === false ? "Não.️" : "Não sei!"}*\n• Conta privada? *${data.resultado.user_info.is_private === true ? "Sim.️" : data.resultado.user_info.is_private === false ? "Não." : "Não sei!"}*\n• Publicações: *${data.resultado.user_info.posts}*\n• Seguidores: *${formatNumber(data.resultado.user_info.followers)}* ( ${formatNumberDecimal(data.resultado.user_info.followers)} )\n• Seguindo: *${formatNumber(data.resultado.user_info.following)}* (${formatNumberDecimal(data.resultado.user_info.following)})\n• Link externo: *${data.resultado.user_info.external_url || "Sem informação."}*\n–\n• Biografia: ${data.resultado.user_info.biography || "O(a) proprietário(a) do perfil não tem nenhuma biografia no perfil."}`
 }
 
 exports.kwaiDownload = (result) => { 
@@ -54,39 +233,35 @@ return `*Usuário:*〔 @${data.resultado.username} 〕\n–\n• *Descrição:* 
 }
 
 exports.soundcloud = (data, tinyUrl) => {
-return `*[ SoundCloud ]* - Informações Áudio:\n- \n• *Música:* ${data.resultado.titulo}\n• *Total de Downloads:* ${data.resultado.total_downloads}\n–\n    • Caso o *áudio* não seja enviado, baixe através do link: ${tinyUrl.data}`
+return `• Música: *${data.resultado.titulo}*\n• *Total de Downloads: *${data.resultado.total_downloads}*\n–\n\t• Caso o *áudio* não seja enviado, baixe através do link: ${tinyUrl.data}`
 }
 
 exports.icmsResult = (data) => {
-return `📊 Estado ICMS: *${data.resultado.icms}%*\n–\n• Valor ICMS _(valor líquido/taxa)_: *R$ ${data.resultado.icmsTotal}*\n• Total BRL _(valor apresentado + valor icms, em real.)_: *R$ ${data.resultado.total}*\n• Total USD _(valor apresentado + valor icms, convertido p/dolar)_: *$ ${data.resultado.dolar}*\n–\n📌 *Observação:* O valor na remessa pode ser outro, esse cálculo é uma probabilidade de que pode ser aplicada essa taxa. Também pode variar a *alíquota* de cada estado, que é a tal coisa que está sendo encomendada.\n–\n⚠️ *Como é realizado o cálculo de um valor abaixo de R$50?*\n	 Produto × icms(seu estado) = valor_icms\n	 Produto + valor_icms = total\n–\n⚠️ *Como é realizado o cálculo de um valor acima de R$50?*\n 	 Produto + (60 + icms(seu estado)) = valor_icms\n	 Produto + valor_icms = total`
+return `📊 Estado ICMS: *${data.resultado.icms}%*\n–\n• Valor ICMS _(valor líquido/taxa)_: *R$ ${data.resultado.icmsTotal}*\n• Total BRL _(valor apresentado + valor icms, em real.)_: *R$ ${data.resultado.total}*\n• Total USD _(valor apresentado + valor icms, convertido p/dolar)_: *$ ${data.resultado.dolar}*\n–\n📌 *Observação:* O valor na remessa pode ser outro, esse cálculo é uma probabilidade de que pode ser aplicada essa taxa. Também pode variar a *alíquota* de cada estado, que é a tal coisa que está sendo encomendada.\n–\n⚠️ *Como é realizado o cálculo de um valor abaixo de R$50?*\n\tProduto × icms(seu estado) = valor_icms\n\tProduto + valor_icms = total\n–\n⚠️ *Como é realizado o cálculo de um valor acima de R$50?*\n 	 Produto + (60 + icms(seu estado)) = valor_icms\n	 Produto + valor_icms = total`
 }
 
 exports.syntaxIcms = (prefix) => {
-return `*Ops!* O comando está sendo utilizado de forma errada, _por favor confira abaixo a forma correta de uso, para obter sucesso._\n–\nPara usar este comando é nescessario, usar da seguinte forma: *${prefix}icms 704|82*, _explicando sobre os valores apresentados:_\n      • *704* ‐ O valor que você deseja saber a probabilidade da possível taxa a ser aplicada sobre o valor.\n      • *82* - O ddd do estado onde você mora, ou o que você deseja consultar.`
+return `*Ops!* O comando está sendo utilizado de forma errada, _por favor confira abaixo a forma correta de uso, para obter sucesso._\n–\nPara usar este comando é nescessario, usar da seguinte forma: *${prefix}icms 704|82*, _explicando sobre os valores apresentados:_\n\t• *704* ‐ O valor que você deseja saber a probabilidade da possível taxa a ser aplicada sobre o valor.\n\t• *82* - O ddd do estado onde você mora, ou o que você deseja consultar.`
 }
 
 exports.syntaxTrackParcels = (prefix) => {
-return `• Coloque o código da encomenda fornecido pelo Correios, abaixo tem a *explicação e o exemplo de uso*:\n–\n⚠️ *Exemplo:* ${prefix}Rastrear [Código]\n    • O *código de rastreamento dos Correios* serve para registrar que uma encomenda foi postada e permite localizá-la durante o processo de envio.\n    • Ele é composto por 9 números e 4 letras, duas delas localizadas no início e duas no final da numeração, como no exemplo: *PC123456789BR*.`
+return `• Coloque o código da encomenda fornecido pelo Correios, abaixo tem a *explicação e o exemplo de uso*:\n–\n⚠️ *Exemplo:* ${prefix}Rastrear [Código]\n\t• O *código de rastreamento dos Correios* serve para registrar que uma encomenda foi postada e permite localizá-la durante o processo de envio.\n\t• Ele é composto por 9 números e 4 letras, duas delas localizadas no início e duas no final da numeração, como no exemplo: *PC123456789BR*.`
 }
 
 exports.invalidCodeRastrear = () => {
-return `• *Código inválido ou nenhum resultado foi retornado.* Por favor informe um código válido, _verifique se você seguiu a instrução abaixo:_\n    • Ele é composto por 9 números e 4 letras, duas delas localizadas no início e duas no final da numeração, como no exemplo: *PC123456789BR*.`
+return `• *Código inválido ou nenhum resultado foi retornado.* Por favor informe um código válido, _verifique se você seguiu a instrução abaixo:_\n\t• Ele é composto por 9 números e 4 letras, duas delas localizadas no início e duas no final da numeração, como no exemplo: *PC123456789BR*.`
 }
 
-exports.syntaxNewsGame = (prefix) => {
-return `O *comando* está sendo usado de forma incorreta. Por favor, verifique os exemplos apresentados abaixo:\n• *Uso:* ${prefix}gamenews -filter *(total: 12)*\n–\n    • ${prefix}gamenews -cod\n    • ${prefix}gamenews -csgo\n    • ${prefix}gamenews -fortnite\n    • ${prefix}gamenews -fifa\n    • ${prefix}gamenews -gamexp\n    • ${prefix}gamenews -pes\n    • ${prefix}gamenews -lol\n    • ${prefix}gamenews -pokemon\n    • ${prefix}gamenews -premio-sports\n    • ${prefix}gamenews -rainbow-6\n    • ${prefix}gamenews -valorant\n    • ${prefix}gamenews -tcg`
-}
-
-exports.syntaxNewsEsportes = (prefix) => {
-return `O *comando* está sendo usado de forma incorreta. Por favor, verifique os exemplos apresentados abaixo:\n• *Uso:* .esportenews -filter *(total: 18)*\n–\n    • ${prefix}esportenews -all\n         • Não realiza nenhum filtro, retorna todas as notícias dos esportes sendo de *forma aleatória.*\n–\n    • ${prefix}esportenews -futebol\n         • Realiza um filtro de notícias, retornando como resposta somente notícias sobre *Futebol*.\n–\n    • ${prefix}esportenews -basquete\n         • Realiza um filtro de notícias, retornando como resposta somente notícias sobre *Basquete*.\n–\n    • ${prefix}esportenews -volei\n         • Realiza um filtro de notícias, retornando como resposta somente notícias sobre *Vôlei*.\n–\n    • ${prefix}esportenews -tenis\n         • Realiza um filtro de notícias, retornando como resposta somente notícias sobre *Tênis*.\n–\n    • ${prefix}esportenews -atletismo\n         • Realiza um filtro de notícias, retornando como resposta somente notícias sobre *Atletismo*.\n–\n    • ${prefix}esportenews -natacao\n         • Realiza um filtro de notícias, retornando como resposta somente notícias sobre *Natação*.\n–\n    • ${prefix}esportenews -ciclismo\n         • Realiza um filtro de notícias, retornando como resposta somente notícias sobre *Ciclismo*.\n–\n    • ${prefix}esportenews -boxe\n         • Realiza um filtro de notícias, retornando como resposta somente notícias sobre *Boxe*.\n–\n    • ${prefix}esportenews -beisebol\n         • Realiza um filtro de notícias, retornando como resposta somente notícias sobre *Beisebol*.\n–\n    • ${prefix}esportenews -futebol-eua\n         • Realiza um filtro de notícias, retornando como resposta somente notícias sobre o *Futebol Americano.*\n–\n    • ${prefix}esportenews -judo\n         • Realiza um filtro de notícias, retornando como resposta somente notícias sobre *Judô*.\n–\n    • ${prefix}esportenews -ginastica\n         • Realiza um filtro de notícias, retornando como resposta somente notícias sobre a *Ginástica Artística*.\n–\n    • ${prefix}esportenews -golfe\n          • Realiza um filtro de notícias, retornando como resposta somente notícias sobre *Golfe*.\n–\n    • ${prefix}esportenews -formula-1\n         • Realiza um filtro de notícias, retornando como resposta somente notícias sobre a *Fórmula 1*.\n–\n    • ${prefix}esportenews -futsal\n         • Realiza um filtro de notícias, retornando como resposta somente notícias sobre *Futsal*.\n–\n    • ${prefix}esportenews -surfe\n         • Realiza um filtro de notícias, retornando como resposta somente notícias sobre *Surfe*.\n–\n    • ${prefix}esportenews -skate\n         • Realiza um filtro de notícias, retornando como resposta somente notícias esportivas sobre: *Skate*.`
-}
-
-exports.rastrearEncomenda = (data, q) => {
-return `• N° de Rastreio: *${q}*\n—\n📌 *Último Status:*\n—\n${data.resultado.lastStatus}\n—\n📦 *Histórico* - Informações detalhadas sobre o trajeto do objeto: ${data.resultado.pathObject}`
+exports.rastrearEncomenda = (dataResult, q) => {
+return `📦 Rastreio de Encomendas:\n• N° de Rastreio: *${q}*\n• Última atualização: *${dataResult.resultado[0].datePost} (${dataResult.resultado[0].timeCount})*\n——\n📍 Histórico de Localização:\n` + dataResult.resultado.map((info, index) => `${index+1}. *${info.description}*\n• Postagem: *${info.timeCount} (${info.datePost})*`).join('\n–\n');
 }
 
 exports.deezerMusic = (theMusicD, prefix) => {
-return `*[ Deezer ]* - Informações da Música:\n–\n• Nome da Música: *${theMusicD.title}*\n• Link da Música: *${theMusicD.link}*\n• Duração em segundos: *${theMusicD.duration}s*\n• Nome do Album: *${theMusicD.album.title}*\n• Link do Album: *${theMusicD.album.title}*\n• Esta música é explícita? *${theMusicD.explicit_lyrics ? 'Sim' : 'Não'}*\n–\n• Nome do Artista: *${theMusicD.artist.name}*\n• Link da Página: *${theMusicD.artist.link}*\n–\nAbaixo será encaminhado uma preview(prévia) da música informada.\n    • Com a duração de apenas *30s*.\n    • Para obter use o comando *${prefix}play* ou baixe o Deezer em sua loja de Apps.`
+ return `*[ Deezer ]* - Informações da Música:\n–\n• Música: *${theMusicD.title}*\n• Link Música: *${theMusicD.link}*\n• Duração em segundos: *${theMusicD.duration}s*\n• Album: *${theMusicD.album.title}*\n• Link Album: *${theMusicD.album.title}*\n• Esta música é explícita? *${theMusicD.explicit_lyrics ? 'Sim' : 'Não'}*\n–\n• Nome do Artista: *${theMusicD.artist.name}*\n• Link da Página: *${theMusicD.artist.link}*\n–\nAbaixo será encaminhado uma preview(prévia) da música informada com a duração de apenas *30s*.\n\t• Para obter use o comando *${prefix}play* ou baixe o Deezer em sua loja de Apps.`
+}
+
+exports.lyrics = (data, II) => {
+ return `• Título: *${data.resultado.name}*\n• Artista: *${data.resultado.byArtist.name}*\n• Descrição: *${data.resultado.description}*\n• URL: *${data.resultado.url}*\n• Letra (Original):\n${II}${data.resultado.lyricOriginal}${II}`
 }
 
 exports.result_APOD = (dataSab, resultExp) => {
@@ -98,39 +273,31 @@ return `• Titulo: *${getBook.data.volumeInfo.title}*\n• Autor do Livro: *${g
 }
 
 exports.mediafireDownload = (ABC, encurt) => {
-  return `*[ MediaFire ]* - Informações Arquivo:\n–\n• *Nome do Arquivo:* ${ABC.resultado[0].nama}\n• *Tamanho:* ${ABC.resultado[0].size}\n• *Tipo de arquivo a ser enviado:* ${ABC.resultado[0].mime}\n–\n*Por favor, aguarde um pouco estou realizando o envio do arquivo.*\n    • Caso haver um atraso de *2min* pode ser o tamanho do arquivo a ser enviado.\n    • *Não enviou?* Realize o download pelo link: ${encurt.data}`
-}
-
-exports.quoteCurrencies = (resposta) => {
-return `*[COTAÇÃO]* - Os dados informados são atualizados 24h por dia: 🗣💰\n–\n• Moeda: *${resposta.name}*\n• Valor da moeda mais alto em 24 horas: *R$ ${Number(resposta.high).toFixed(2)}*\n• Valor da moeda mais baixo em 24 horas: *R$ ${Number(resposta.low).toFixed(2)}*\n• Valor da moeda atualizado agora no momento: *R$ ${Number(resposta.bid).toFixed(2)}*`
+  return `*[ MediaFire ]* - Informações Arquivo:\n–\n• *Nome do Arquivo:* ${ABC.resultado[0].nama}\n• *Tamanho:* ${ABC.resultado[0].size}\n• *Tipo de arquivo a ser enviado:* ${ABC.resultado[0].mime}\n–\n*Por favor, aguarde um pouco estou realizando o envio do arquivo.*\n\t• Caso haver um atraso de *2min* pode ser o tamanho do arquivo a ser enviado.\n\t• *Não enviou?* Realize o download pelo link: ${encurt.data}`
 }
 
 exports.horoscopo = (q, ABC) =>  {
 return `Signo: ${q}\n${ABC.resultado.inform}`
 }
 
-exports.respostaChatGPT = (anu1) => {
-return `${anu1.resultado}`
+exports.respostaChatGPT = (dataResulted) => {
+return `${dataResulted.result}`
 }
 
-exports.respostaResumida = (anu1) => {
-return `${anu1.resultado}`
+exports.respostaResumida = (dataResulted) => {
+return `${dataResulted.result}`
 }
 
-exports.respostaRedacao = (anu1) => {
-return `${anu1.result}`
-}
-
-exports.respostaBard = (r) => {
-return `${r.resultado}`
-}
-
-exports.corretorOrtografico = (anu1) => {
-return `📖 *Texto corrigido:* ${anu1.resultado}`
+exports.respostaRedacao = (dataResulted) => {
+return `${dataResulted.result}`
 }
 
 exports.wikiResposta = (wikis) => {
 return `${wikis.data.query.pages[Object.keys(wikis.data.query.pages)].extract}`
+}
+
+exports.googleImage = (data) => {
+return `• Título: *${data.origin.title || "Não existe título na imagem."}*\n• URL: *${data.origin.website.url || "Sem URL."}* \n• Fonte: *${data.origin.website.name || "Sem informação."} _(${data.origin.website.domain || "Sem informação."})_*\n• Resolução: *${data.height || "0"} × ${data.width || "0"}*`
 }
 
 exports.aptoide = (getApk, sizeApk, lnDown) => {
@@ -181,10 +348,6 @@ exports.noresult = () => {
 return `Desculpe, não consegui encontrar o que você procurava utilizando essa forma, pode tentar de outra maneira?`;
 }
 
-exports.commandNotFound = (tempo, prefix) => { 
-return `• *${tempo}*, o comando usado não foi encontrado!\n• Utilize *${prefix}menu* para visualizar meus comandos.`
-}
-
 exports.sucessWarning = () => { 
 return `Aviso referente a este grupo foi criado(a) com sucesso..`
 }
@@ -205,21 +368,6 @@ exports.sucessDeleteWarning = (prefix) => {
 return `O registro anterior foi apagado e recriou um novo, se deseja continuar, clique no botão abaixo..\n- Lembre-se que há avisos programados em outros horários, se quiser limpar todos, digite: ${prefix}rm_avisos`
 }
 
-exports.warningMB = (prefix) => { 
-return `Este comando so pode ser utilizado com o modo brincadeiras estiver ativo.\nPara ativar, use: *${prefix}modobrincadeira 1*, já para desativar e só mudar o *1* para *0*.`
-}
-
-exports.aluguelRegisteredS = () => { 
-return "Registro de aluguel deste grupo, foi feito com sucesso..."
-}
-
-exports.aluguelRgSyntax = (prefix) => { 
-return `Cade a |\nExemplo: ${prefix}rg_aluguel 01/01|Dono do grupo: 555555555 / Pra cobrar o aluguel..`
-}
-
-exports.tabelaGrupo = (groupName, tabelagpofc) => {
-return `Nome do Grupo:* ${groupName}\n–\n*Horário que criou a tabela:* ${tabelagpofc.Horario}\n*Data que criou a tabela:* ${tabelagpofc.Data}\n–\n*Tabela:* ${tabelagpofc.Tabela}`
-}
 
 exports.syntaxOperadora = (prefix) => {
 return `Coloque o *número de telefone* que você deseja descobrir a operadora!\n   • É possível somente consultar a operadora de números brasileiros.\n    • Exemplo: *${prefix}operadora 82988279194*`
@@ -229,59 +377,8 @@ exports.qualOperadora = (data) => {
 return `☎️ *Qual Operadora?*\n—\n• N° de Telefone: *${data.resultado.telefone}*\n• Qual é a operadora do número informado? *${data.resultado.operadora}*\n• Este tipo de dispositivo é um: *Telefone ${data.resultado.dispositivo}*\n• Qual é o(a) estado/cidade do DDD informado no número? *${data.resultado.estado}*`
 }
 
-exports.aluguelGroupRegistered = () => { 
-return "Este grupo ja foi registrado."
-}
-
-exports.aluguelRemoveSyntax = (prefix) => { 
-return `Digite o ID do grupo que deseja tirar da lista de aluguel, fórma mais fácil de achar o id é consultando o comando lista_aluguel, ou então executando o comando iddogrupo dentro do grupo que deseja tirar da lista de aluguel, e copiando o id, e executando dessa forma.\nExemplo: ${prefix}rm_aluguel 120363343392567405@g.us`
-}
-
-exports.aluguelRemoveGroup = () => { 
-return "Grupo tirado do registro de aluguel com sucesso.."
-}
-
-exports.FormWrong_AddWordsForca1 = (prefix) => { 
-return `Faltando a primeira |\nExemplo: ${prefix}addpalavras_forca titulo|tema|dica`
-}
-
-exports.FormWrong_AddWordsForca2 = (prefix) => { 
-return `Faltando a segunda |\nExemplo: ${prefix}addpalavras_forca titulo|tema|dica`
-}
-
-exports.sucessAddWord_Forca = () => {
-return "Palavra adicionada ao jogo da forca com sucesso..."
-}
-exports.sucessRemWord_Forca = () => {
-return "Palavra tirada do jogo da forca com sucesso..."
-}
-
-exports.inUseWords_Forca = () => {
-return "Esta palavra já foi adicionada/existente..."
-}
-
-exports.gameForcaNotStarted = (prefix) => {
-return `O jogo não foi iniciado. Digite: ${prefix}iniciar_forca`
-}
-
-exports.sucessResetForca = (prefix) => {
-return `O jogo da forca foi resetado com sucesso... Para iniciar novamente é só usar o comando: ${prefix}inciar_forca`
-}
-
-exports.forcaInProgress = (prefix) => {
-return `Jogo já está em andamento, caso queira resetar, fale com um adm para executar ${prefix}resetforca, ou tente acertar o jogo da forca que deve está logo a cima.`
-}
-
-exports.forcaStarted = (DM_FR, linha_fr, prefix) => {
-return `Jogo da Forca - Contém ${DM_FR.palavra_ofc.length} letras.\nTema: ${DM_FR.tema}\nDica: ${DM_FR.dica}\n\n|________\n       _¦_\n\n\n\n\n\n\n${linha_fr}\n\n_______________________________\n\n_- JOGO INICIADO COM SUCESSO! -_\nPara responder, use: ${prefix}r-f letra que talvez exista por sua observação ou ${prefix}r-f nome todo\n_______________________________`
-}
-
-exports.forcaStartedRespond = (DM_FR, ERROS, ERRQ, linha_fr, letra_ut) => {
-return `Jogo da Forca - Contém ${DM_FR.palavra_ofc.length} letras.\nTema: ${DM_FR.tema}\nDica: ${DM_FR.dica}\n\n__________-_\n         _|_\n\n        ${ERROS+ERRQ >= 1 ? "🤡":""}\n      ${ERROS+ERRQ >= 2 ? "👈":""} ${ERROS+ERRQ >= 3 ? "👉":""}  \n         ${ERROS+ERRQ >= 4 ? "👖":""}\n         ${ERROS+ERRQ >= 5 ? "👞":""} ${ERROS+ERRQ >= 6 ? "👞":""}\n\n${linha_fr}\n\n___-________-_____\n\nLetras ja utilizadas: ${letra_ut}\n___-________-_____`
-}
-
-exports.profileInformation = (pushname, sender, info, putar, putar2, gostosurar, gostosurar2, nivelgador, nivelgado2r, programa, conselho, status) => {
-return `👤 「 *INFORMAÇÕES - PERFIL* 」\n–\n• Nome: *${pushname}*\n• Mencionando: *@${sender.split("@")[0]}*\n• Você atualmente está conectado em um dispositivo: ${info.key.id.length > 21 ? '*Android*' : info.key.id.substring(0, 2) == '3A' ? '*iOS*' : '*Windows/Linux*'}\n• Sua biografia: *${status}*\n–\n• Seu nível de prostituição: *${putar}${putar2}%*\n• Seu nível de gostosura: *${gostosurar}${gostosurar2}%*\n• Seu nível do gadometro: *${nivelgador}${nivelgado2r}%*\n• Valor do seu programa: *R$${programa}*\n–\n• *CONSELHO:*\n\t${conselho}`
+exports.profileInformation = (pushname, sender, info, putar, putar2, gostosurar, gostosurar2, nivelgador, nivelgado2r, programa, status) => {
+return `👤 「 *INFORMAÇÕES - PERFIL* 」\n–\n• Nome: *${pushname} (@${sender.split("@")[0]})*\n• Você atualmente está conectado em um dispositivo: ${info.key.id.length > 21 ? '*Android*' : info.key.id.substring(0, 2) == '3A' ? '*iOS*' : '*Windows/Linux*'}\n• Biografia: *${status}*\n–\n• Seu nível de prostituição: *${putar}${putar2}%*\n• Seu nível de gostosura: *${gostosurar}${gostosurar2}%*\n• Seu nível do gadometro: *${nivelgador}${nivelgado2r}%*\n• Valor do seu programa: *R$${programa}*`
 }
 
 exports.warningAdvertencia = (menc_os2, dfqn) => {
@@ -304,14 +401,6 @@ exports.sucessAnonymousMail = () => {
 return `✅ O correio foi enviado para o remetente com sucesso.\n–\n• *Obs:* Ele(a) pode descobrir quem enviou. _Não me responsabilizo se você enviou mensagens desencorajadas._`
 }
 
-exports.syntaxPrivatePhotoBot = (prefix) => {
-return `• ${prefix}privphotobot - Minha foto de perfil visível a todos que entrarem em contato comigo.\n–\n• ${prefix}privphotobot cntt - Minha foto de perfil visível somenre aos meus contatos salvos.\n–\n• ${prefix}privphotobot ngm - Ninguém verá a minha foto de perfil, ou seja, estará oculta a todos.\n–\n*Obs:* Isso mexe nas configurações de privacidade do WhatsApp e não nas funções do bot.`
-}
-
-exports.syntaxPrivAddGroup = (prefix) => {
-return `• ${prefix}privaddgroup all - Todos os contatos e números que salvarem o número do bot poderam adicionar em grupo.\n–\n• ${prefix}privaddgroup cntt - Somente os contatos salvos em seu dispositivo poderam adicionar em grupos.\n–\n• ${prefix}privaddgroup ngm - Ninguém poderá me adicionar em grupo, somente enviando convite e vossa senhoria aceitando manualmente.\n–\n*Obs:* Isso mexe nas configurações de privacidade do WhatsApp e não nas funções do bot.`
-}
-
 exports.unbannedMessage = (blcp) => {
 return `@${blcp.split('@')[0]} foi desbanido e poderá novamente usar os comandos do bot.`
 }
@@ -325,19 +414,11 @@ return `Olá, aqui está a lista de proprietários do bot: ${NomeDoBot}\n–\n*D
 }
 
 exports.speedSabrina = (tempo, sender, r, kyun, uptime, infoSystem, reqcmd) => {
-return `${tempo}, Usuário: @${sender.split("@")[0]}\n—\n• Velocidade de Resposta: *${String(r.toFixed(3))} segundos.*\n• O bot se encontra online por: *${kyun(uptime)}*\n• Sistema Operacional: *${infoSystem.type()}*\n• Versão: *${infoSystem.release()}*\n• Total de requisições de comandos desde da 1° inicialização: *${reqcmd[0].totalcmd}*\n• Memória RAM: *${(infoSystem.totalmem()/Math.pow(1024, 3)).toFixed(2)}GB / ${(infoSystem.freemem()/Math.pow(1024, 3)).toFixed(2)}GB*`.trim()
+return `${tempo}, Usuário: @${sender.split("@")[0]}\n—\n• Velocidade de Resposta: *${String(r.toFixed(3))} segundos.*\n• O bot se encontra online por: *${kyun(uptime)}*\n• Sistema Operacional: *${infoSystem.type()}*\n• Versão: *${infoSystem.release()}*\n• Total de requisições de comandos desde da 1° inicialização: *${reqcmd[0].totalcmd}*\n• Memória RAM: *${(infoSystem.freemem()/Math.pow(1024, 3)).toFixed(2)}GB / ${(infoSystem.totalmem()/Math.pow(1024, 3)).toFixed(2)}GB*`.trim()
 }
 
-exports.infoPatente = (tempo, sender, patente, level_up) => {
-return `${tempo}, usuário: @${sender.split("@")[0]}, aqui está suas informações de patente e level para saber como está atualmente:\n–\n✧ Patente: ${patente} - Level ${level_up}`
-}
-
-exports.updatePatente = (sender, qnt_msg, patente, level_up) => {
-return `✥ Parabéns: @${sender.split("@")[0]}\nVocê upou de level e também de patente por completar ${qnt_msg} mensagens, veja as informações abaixo...\n–\n✧ Patente: ${patente} - Level ${level_up}`
-}
-
-exports.statusBot = (isAnticall, isAntiPv, isAntiImg, isAntiVid, isAntiAudio, isAntiSticker, isNsfw, Antidoc, isAntiCtt, Antiloc, isAntilinkgp, isAntiLinkHard, isAntifake, isAntiNotas, isAnticatalogo, isPalavrao, isAntiFlood, isWelkom, isWelkom2, isSimi, isSimi2, isAutofigu, isAutorepo, isModobn, isModoAluguel, isLevelingOn) => {
-return `Status de funcionalidades ativaveis para proteger o grupo / se divertir com seus participantes.\nAs funcionalidades como *Anti Privado Block - Anti Ligação - Modo Aluguel*, são ativações que somente o dono, pode executar, _então caso esteja ativa você não poderá executar comandos no privado ou fazer ligações ao número do bot._\n–\n➱ Anti Ligação: ${isAnticall ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti PV Block: ${isAntiPv ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Imagem: ${isAntiImg ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Vídeo: ${isAntiVid ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Áudio: ${isAntiAudio? '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Sticker: ${isAntiSticker ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Documento: ${Antidoc ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Contato ${isAntiCtt ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Localização: ${Antiloc ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Link Grupo: ${isAntilinkgp ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Link Hard: ${isAntiLinkHard ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Fake: ${isAntifake ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Notas: ${isAntiNotas ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Catalogo: ${isAnticatalogo ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Palavrão: ${isPalavrao ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Limite Caracteres: ${isAntiFlood ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Bem Vindo 1: ${isWelkom ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Bem Vindo 2: ${isWelkom2 ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Simi 1: ${isSimi ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Simi 2: ${isSimi2 ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Auto Sticker: ${isAutofigu ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Auto Resposta: ${isAutorepo ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Modo Brincadeira: ${isModobn ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Modo Aluguel: ${isModoAluguel ?  '✓ - Função ativa.' : '✕ - Não ativado.'}\n➱ Level ${isLevelingOn ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Modo Nsfw: ${isNsfw ?  '✓ - Função ativa.' : '✕ - Desativado.'}`
+exports.statusBot = (isAnticall, isAntiPv, isAntiPv2, isAntiPv3, isAntiImg, isAntiVid, isAntiAudio, isAntiSticker, isNsfw, Antidoc, isAntiCtt, Antiloc, isAntilinkgp, isAntiLinkHard, isAntifake, isAntiNotas, isAnticatalogo, isPalavrao, isAntiFlood, isWelkom, isWelkom2, isSimi, isSimi2, isAutofigu, isAutorepo, isModobn, isModoAluguel, isLevelingOn) => {
+return `Status de funcionalidades ativaveis para proteger o grupo / se divertir com seus participantes.\nAs funcionalidades como *Anti Privado - Anti Ligação - Modo Aluguel*, são ativações que somente o dono, pode executar, _então caso esteja ativa você não poderá executar comandos no privado ou fazer ligações ao número do bot._\n–\n➱ Anti Ligação: ${isAnticall ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti PV Block: ${isAntiPv ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti PV (2) - Sem bloqueio de usuário(s): ${isAntiPv2 ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti PV (3) - Não responde ninguém no privado: ${isAntiPv3 ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Imagem: ${isAntiImg ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Vídeo: ${isAntiVid ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Áudio: ${isAntiAudio? '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Sticker: ${isAntiSticker ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Documento: ${Antidoc ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Contato ${isAntiCtt ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Localização: ${Antiloc ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Link Grupo: ${isAntilinkgp ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Link Hard: ${isAntiLinkHard ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Fake: ${isAntifake ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Notas: ${isAntiNotas ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Catalogo: ${isAnticatalogo ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Anti Palavrão: ${isPalavrao ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Limite Caracteres: ${isAntiFlood ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Bem Vindo 1: ${isWelkom ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Bem Vindo 2: ${isWelkom2 ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Simi 1: ${isSimi ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Simi 2: ${isSimi2 ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Auto Sticker: ${isAutofigu ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Auto Resposta: ${isAutorepo ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Modo Brincadeira: ${isModobn ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Modo Aluguel: ${isModoAluguel ?  '✓ - Função ativa.' : '✕ - Não ativado.'}\n➱ Level ${isLevelingOn ?  '✓ - Função ativa.' : '✕ - Desativado.'}\n➱ Modo Nsfw: ${isNsfw ?  '✓ - Função ativa.' : '✕ - Desativado.'}`
 }
 
 exports.errorUploadImage = () => {
@@ -350,6 +431,10 @@ return `Como deseja realizar uma pesquisa sem conter nenhum argumento? `
 
 exports.syntaxLogos = () => {
 return `Cadê o texto? Para eu criar uma logo preciso que você coloque um texto atribuído ao comando..`
+}
+
+exports.quoteCurrencies = (response) => {
+return `*[COTAÇÃO]* - Os dados informados são atualizados 24h por dia: 🗣💰\n–\n• Moeda: *${response.name}*\n• Valor da moeda mais alto em 24 horas: *R$ ${Number(reponse.high).toFixed(2)}*\n• Valor da moeda mais baixo em 24 horas: *R$ ${Number(repose.low).toFixed(2)}*\n• Valor da moeda atualizado agora no momento: *R$ ${Number(resposta.bid).toFixed(2)}*`
 }
 
 exports.syntaxWebSticker = (prefix) => {
@@ -403,14 +488,6 @@ exports.absenceRecordAdmin = (blak) => {
 return `*Registro de Ausência* - O adminstrador "@${blak.id.split("@")[0]}" se encontra *ausente* nesse momento.\n–\n☇ Mensagem: ${blak.msg}`
 }
 
-exports.conselhoBiblico = (tempo, pushname, conselhosb, NomeDoBot, groupName) => {
-return `${tempo}, ${pushname}! Um conselho bíblico para você:\n–\n${conselhosb}\n–\n• *Bot:* ${NomeDoBot}\n• *Grupo:* ${groupName}`
- }
-
-exports.aluguelMessageActivated = (pushname) => {
-return `Olá *${pushname}*, meu proprietário ativou o modo aluguel, ou seja, os comandos não estão liberados aqui. Somente com a autorização dele eu posso responder comandos dados pela administração ou participantes deste grupo / comunidade.`
-}
-
 exports.floodCommands = () => {
 return `Espere *5s* para usar outro comando ou executar o mesmo...`
 }
@@ -435,18 +512,74 @@ exports.antiCalls = () => {
 return `Olá amigo, o anti ligar está ativo no momento, ou seja, estou recebendo as ordens de bloquear aqueles que efetuarem ligações para mim.`
 }
 
-exports.bannedUser = () => {
-return "Você está impossibilitado de usar meus comandos! *Por favor, solicite o desbloqueio ao meu dono.*"
+exports.helpGroupSettings = (prefix, sender) => {
+return `🤠 Olá administrador(a) *@${sender.split("@")[0]}*! Tudo bem?\n- Seja bem vindo(a), ao menu de ajuda do comando *'grupo'*:\n–\n1. _${prefix}grupo_ *-open* _→_ Permite o envio das mensagens por todos os participantes do grupo.\n\n2. _${prefix}grupo_ *-close* _→_ Permite o envio de mensagens apenas somente para administradores do grupo.\n\n3. _${prefix}grupo_ *-livre* _→_ Permite a todos os integrantes que editem os dados.\n\n4. _${prefix}grupo_ *-private* _→_ Só irá permitir que as alterações nos dados do grupo, sejam alteradas somente por administradores do mesmo.`
 }
 
-exports.syntaxRequestProhibited = (prefix) => {
-return `Este comando tem a função de *aceitar, recusar solicitações e lista de pessoas que desejam entrar no grupo*.\n    • Veja os exemplos de uso do comando para não usar de *forma errada*.\n–\n    • *Exemplo 1:* Aceitar solicitação da pessoa que deseja entrar no grupo.\n        •  ${prefix}requestgp -a [número]\n–\n    • *Exemplo 2:* Recusar solicitação da pessoa que deseja entrar no grupo.\n        •  ${prefix}requestgp -r [número]\n–\n    • *Exemplo 3:* Ver a lista de pessoas que desejam entrar no grupo.\n        •  ${prefix}requestgp -a [número]`
+exports.helpPhotoPrivacy = (prefix, sender) => {
+return `🤪 Olá proprietário(a) *@${sender.split("@")[0]}*! Tudo bem?\n- Seja bem vindo(a), ao menu de ajuda do comando *'wprivacyph'*:\n–\n1. _${prefix}wprivacyph_ *-cntt* _→_ Permite somente que os contatos salvos no dispositivo, vejam a foto de perfil.\n\n2. _${prefix}wprivacyph_ *-all* _→_ Permite que todos vejam a foto de perfil do bot.\n\n3. _${prefix}wprivacyph_ *-noall* _→_ Ninguém irá ver a foto de perfil colocada no bot, ou seja, até o proprietário está restrito(oculto) de ver.\n–\n📍 *Função:* O comando tem a função de alterar a privacidade da foto de perfil, ou seja, você tem como alterar diretamente do bot, sem a precisão abrir o numero do bot e mexer nas configurações.`
 }
 
-exports.exeAnimeImage = (prefix) => {
-return `O *comando* está sendo usado de forma incorreta. Por favor, verifique os exemplos apresentados abaixo:\n• *Uso:* ${prefix}editanime -filter *(total: 49)*\n–\n   ${prefix}animeimage -cosplay\n–\n   ${prefix}animeimage -waifu\n–\n   ${prefix}animeimage -loli\n–\n   ${prefix}animeimage -shota\n–\n   ${prefix}animeimage -shinomiya\n–\n   ${prefix}animeimage -yotsuba\n–\n   ${prefix}animeimage -yumeko\n–\n   ${prefix}animeimage -tejina\n–\n   ${prefix}animeimage -chiho\n–\n   ${prefix}animeimage -kaori\n–\n   ${prefix}animeimage -boruto\n–\n   ${prefix}animeimage -shizuka\n–\n   ${prefix}animeimage -kaga\n–\n   ${prefix}animeimage -kotori\n–\n   ${prefix}animeimage -mikasa\n–\n   ${prefix}animeimage -akiyama\n–\n   ${prefix}animeimage -gremory\n–\n   ${prefix}animeimage -izuku\n–\n   ${prefix}animeimage -shina\n–\n   ${prefix}animeimage -shinka\n–\n   ${prefix}animeimage -yuri\n–\n   ${prefix}animeimage -eba\n–\n   ${prefix}animeimage -erza\n–\n   ${prefix}animeimage -elaina\n–\n   ${prefix}animeimage -hinata\n–\n   ${prefix}animeimage -naruto\n–\n   ${prefix}animeimage -minato\n–\n   ${prefix}animeimage -sagari\n–\n   ${prefix}animeimage -nezuko\n–\n   ${prefix}animeimage -rize\n–\n   ${prefix}animeimage -anna\n–\n   ${prefix}animeimage -deidara\n–\n   ${prefix}animeimage -asuna\n–\n   ${prefix}animeimage -ayuzawa\n–\n   ${prefix}animeimage -emilia\n–\n   ${prefix}animeimage -chitoge\n–\n   ${prefix}animeimage -hestia\n–\n   ${prefix}animeimage -inori\n–\n   ${prefix}animeimage -itachi\n–\n   ${prefix}animeimage -madara\n–\n   ${prefix}animeimage -sakura\n–\n   ${prefix}animeimage -sasuke\n–\n   ${prefix}animeimage -tsunade\n–\n   ${prefix}animeimage -onepiece\n–\n   ${prefix}animeimage -mobil\n–\n   ${prefix}animeimage -montor\n–\n   ${prefix}animeimage -keneki\n–\n   ${prefix}animeimage -megumin\n–\n   ${prefix}animeimage -toukachan`
+exports.helpGroupPrivacy = (prefix, sender) => {
+return `🤪 Olá proprietário(a) *@${sender.split("@")[0]}*! Tudo bem?\n- Seja bem vindo(a), ao menu de ajuda do comando *'wprivacygp'*:\n–\n1. _${prefix}wprivacygp_ *-cntt* _→_ Permite somente que os contatos salvos no dispositivo, adicionem em grupo.\n\n2. _${prefix}wprivacygp_ *-all* _→_ Permite que todos os contatos adicionem no grupo, sem nenhuma interferência.\n\n3. _${prefix}wprivacygp_ *-noall* _→_ Ninguém conseguirá adicionar o bot em grupos, até o(a) dono(a) está restrito.\n–\n📍 *Função:* O comando tem a função de alterar a privacidade de todos os usuários adicionar o contato da bot em grupos, ou seja, você tem como alterar diretamente do bot, sem a precisão abrir o numero do bot e mexer nas configurações do número.`
 }
 
-exports.exeAnimeEdit = (prefix) => {
-return `O *comando* está sendo usado de forma incorreta. Por favor, verifique os exemplos apresentados abaixo:\n• *Uso:* ${prefix}editanime -filter *(total: 07)*\n–\n   ${prefix}editanime -random\n–\n   ${prefix}editanime -bleach\n–\n   ${prefix}editanime -chainsaw\n–\n   ${prefix}editanime -dragonball\n–\n   ${prefix}editanime -kimetsu\n–\n   ${prefix}editanime -jujutsu\n–\n   ${prefix}editanime -naruto`
+exports.horseStore = (tempo, sender, prefix, lvlHorse) => {
+return `${tempo} *@${sender.split("@")[0]}*, Seja bem vindo(a) à loja de cavalos:\n—\n❱❱ ${prefix}comprarestabulo *[R$ 500.00]* - De início é necessário você comprar.\n❱❱ ${prefix}upcavalo - Faça um upload em seu(s) cavalo(s). *[${lvlHorse}]*\n—\n🐎 *Comprar Cavalos:*\n❱❱ ${prefix}comprarcavalo 1 *[R$ 500.00]*\n❱❱ ${prefix}comprarcavalo 2 *[R$ 1000.00]*\n❱❱ ${prefix}comprarcavalo 3 *[R$ 1500.00]*\n❱❱ ${prefix}comprarcavalo 4 *[R$ 2000.00]*\n—\n🌾 *Equipamentos:*\n❱❱ ${prefix}comprarsela *[R$ 200.00]* - Compre uma sela para o seu cavalo.\n❱❱ ${prefix}cdcv3 *[R$ 200.00]* - Verifique o status atual de seu alazão.\n❱❱ ${prefix}atadura *[R$ 250.00]* - Caso tenha alguma fratura em alazão.\n—\n🏪 *Vendas:*\n❱❱ Para vender seu alazão, use o comando ao lado: *${prefix}vendercavalo*\n❱❱ Para vender seu estábulo, use o comando ao lado: *${prefix}venderestabulo*`
+}
+
+exports.roosterStore = (tempo, sender, prefix, PC) => {
+return `*${tempo}* @${sender.split('@')[0]}, Seja bem vindo(a) à loja de galos:\n🐓🏷 *Loja de Galos:*\n❱❱ ${prefix}comprargalinheiro *[R$ 500.00]*\n❱❱ ${prefix}comprargalo 1 *[R$ 100.00]*\n❱❱ ${prefix}comprargalo 6 *[R$ 550.00]*\n❱❱ ${prefix}comprargalo 12 *R$ 1000.00]*\n❱❱ ${prefix}comprargalinha *[R$ 100.00]*\n❱❱ ${prefix}upgalo *[${PC}]*\n––\n🐓🏷 *Vendas:*\n❱❱ Venda de Galos: *${prefix}vendergalo (quantidade)*\n❱❱ Venda de Galinhas: *${prefix}vendergalinha (quantidade)*`
+}
+
+exports.sabCityStore = (tempo, sender, prefix) => {
+return `${tempo} *@${sender.split("@")[0]}*, bem vindo a minha loja de RPG!\n—–\n❱❱ Lojas de Cavalos: *${prefix}lojadecavalos*\n❱❱ Lojas de Galos: *${prefix}lojadegalos*\n—–\n🛍️ *Produtos:*\n*1.* Comprar Segurança *[R$ 600.00]*\n❑→ ${prefix}comprarsegurança 1 | Você consegue *40% de proteção*!\n*2.* Comprar Segurança *[R$ 1200.00]*\n❑→ ${prefix}comprarsegurança 2 | Você consegue *60% de proteção*!\n*3.* Comprar Segurança *[R$ 1800.00]*\n❑→ ${prefix}comprarsegurança 3 | Você consegue *80% de proteção*!`
+}
+
+exports.errorResponseSimi = () => {
+response = ["Eu não entendo tudo senhor(a), sou uma simples simi! Me explique...", "Eu sei, eu sei! 👀 Não querendo abusar, o que é isso? Me ensina...", "Não me xinga amor! 😭 Eu ainda tenho muito à aprender...", "*An, oxe?* 🤷🏻‍♀ O que é isso? Poderia me explicar por favor humano(a)?", "Eu sou um(a) bot! 🤖 Mas eu não sei de tudo não! Me explica por favor?"];
+return response[Math.floor(Math.random() * response.length)]
+}
+
+exports.GshowGE = (dataResult) => {
+return dataResult.resultado.map((info, index) => `${index+1}. *${info.titulo || 'Manchete sem título.'}* - (${info.horarioPostagem || 'Há X horas.'})\n• ${info.trechoManchete || 'Manchete sem descrição.'}`).join('\n–\n');
+}
+
+exports.helpNoticesG = (sender, prefix) => {
+return `😸 Olá @${sender.split('@')[0]}, seja bem-vindo ao menu de ajuda e tutoriais do comando: *'gamenews'* | *'gamesnews'*\n–\n# O comando possuí 11 argumentações de uso, cada uma tem um filtro de notícia. Lembrando, este comando é somente para notícias de jogos online! Para ver notícias de Time, use: _${prefix}esportenews_.
+–
+*01.* Call of Duty: ${prefix}gamenews -cod
+*02.* Counter-Strike: ${prefix}gamenews -csgo
+*03.* FIFA 2024: ${prefix}gamenews -fifa
+*04.* Fortnite: ${prefix}gamenews -fortnite
+*05.* GameXP: ${prefix}gamenews -gamexp
+*06.* PES 2024: ${prefix}gamenews -pes
+*07.* League of Legends: ${prefix}gamenews -lol
+*08.* Pokemon: ${prefix}gamenews -pokemon
+*09.* Rainbow 6: ${prefix}gamenews -r6
+*10.* Valorant: ${prefix}gamenews -valorant
+*11.* Pokemon TCG: ${prefix}gamenews -tcg`
+}
+
+exports.helpNoticesEsporte = (sender, prefix) => {
+return `🌟 Olá @${sender.split('@')[0]}, seja bem-vindo ao menu de ajuda e tutoriais do comando: *'esporte_noticias'* | *'esportenews'*\n–\n# O comando possuí 18 argumentações de uso, cada uma tem um filtro de notícia. Lembrando, este comando é somente para notícias de esportes! Para ver notícias de jogos online, use: _${prefix}gamenews_.
+–
+*01.* Todas as categorias agrupadas à um só parâmetro: ${prefix}esportenews -all
+*02.* Futebol: ${prefix}esportenews -futebol
+*03.* Futsal: ${prefix}esportenews -futsal
+*04.* Skate: ${prefix}esportenews -skate
+*05.* Surfe: ${prefix}esportenews -surf
+*06.* Basquete: ${prefix}esportenews -basquete
+*07.* Vôlei: ${prefix}esportenews -volei
+*08.* Tênis: ${prefix}esportenews -tenis 
+*09.* Atletismo: ${prefix}esportenews -atletismo
+*10.* Natação: ${prefix}esportenews -natacao
+*11.* Ciclismo: ${prefix}esportenews -ciclismo
+*12.* Boxe: ${prefix}esportenews -boxe
+*13.* Beisebol: ${prefix}esportenews -beisebol
+*14.* Futebol EUA: ${prefix}esportenews -futebol-eua
+*15.* Judô: ${prefix}esportenews -judo
+*16.* Ginástica: ${prefix}esportenews -ginastica
+*17.* Golfe: ${prefix}esportenews -golfe
+*18.* Fórmula 1: ${prefix}esportenews -f1`
 }

@@ -1,4 +1,4 @@
-const fs = require("fs-extra")
+const fs = require("fs")
 const sabrpg = JSON.parse(fs.readFileSync("./database/usuarios/SystemRPG/sabrpg.json"));
 
 exports.AdicionarGold = (UserID, ValorA) => {

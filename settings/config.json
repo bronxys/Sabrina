@@ -1,0 +1,37 @@
+{
+  "OwnerNumber": {
+    "description": "Definir o número do dono oficial do bot, ou seja, o superior.",
+    "value": "558299668686"
+  },
+  "Prefix": {
+    "description": "Definir um prefixo para o BOT reconhecer como comando. Lembrando, não é afetado os comandos sem prefixos.",
+    "value": "!"
+  },
+  "nameOwner": {
+    "description": "Definir o nome que você deseja ser reconhecido como dono na BOT, será presente em comandos informativos.",
+    "value": "Victor Gabriel"
+  },
+  "botName": {
+    "description": "Definir o nome do bot, pode incluir letras modificadas e símbolos.",
+    "value": "Sabrina-BOT ©"
+  },
+  "stickerAuthor": {
+    "description": "Especificar o autor do stickers criados através do bot. Mantenha como padrão (opcional) se desejar.",
+    "value": "{user} 👤\n{botname} [linktr.ee/gabalvsz] 🌐\n{time} 📅"
+  },
+  "stickerPack": {
+    "description": "Especificar o pacote do sticker. Mantenha o padrão para criar sticker com base em informações.",
+    "value": "⚙️ Usuário:\n🤖 Criado por:\n🕒 Tempo:"
+  },
+  "NewsletterConfig": {
+    "description": "Coloque o ID do canal do WhatsApp. Caso você não tenha o ID do seu canal, entre em contato com meu dono.",
+    "value": "120363217331549596@newsletter"
+  },
+  "subOwners": {
+    "dono1": "51968374620",
+    "dono2": "",
+    "dono3": "",
+    "dono4": "",
+    "dono5": ""
+  }
+}
